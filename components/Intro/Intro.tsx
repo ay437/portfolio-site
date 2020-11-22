@@ -1,10 +1,11 @@
+import React from 'react';
 import { Typography } from '@material-ui/core';
 import Image from 'next/image';
 
-function Info(props) {
+function Intro(props) {
   const { title } = props;
   return (
-  <div>
+    <div>
       <Typography variant="h1">{title}</Typography>
       <Image
         src="/me.png"
@@ -12,8 +13,8 @@ function Info(props) {
         width={200}
         height={300}
       />
-  </div>
-  )
+    </div>
+  );
 }
 
-export default Info
+export default Intro;

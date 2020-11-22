@@ -23,16 +23,16 @@ const useStyles = makeStyles(() => createStyles({
   },
 }));
 
-function App() {
+function SimpleView() {
   const classes = useStyles();
   return (
     <ThemeProvider theme={theme}>
-      <Nav homepage />
+      <Nav homepage={false} />
       <Box className={classes.outerPadding}>
-        <CardLayout altLayout={false} />
+        <CardLayout altLayout />
       </Box>
     </ThemeProvider>
   );
 }
 
-export default App;
+export default SimpleView;

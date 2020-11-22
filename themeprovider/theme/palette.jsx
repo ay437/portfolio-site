@@ -1,6 +1,8 @@
 import * as colors from './colorPalette';
 
-const { coreRed, coreWaterBlue, coreBlue, coreYellow, coreWhite } = colors;
+const {
+  coreRed, coreWaterBlue, coreBlue, coreYellow, coreWhite,
+} = colors;
 
 export default {
   palette: {

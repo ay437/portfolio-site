@@ -1,28 +1,38 @@
-import { Typography } from '@material-ui/core';
-import Box from '@material-ui/core/Box';
-import Intro from '../Into/Intro';
+import React, { FunctionComponent } from 'react';
+import { Typography, Box } from '@material-ui/core';
+import Intro from '../Intro/Intro';
 import Links from '../Links/Links';
 import LinkData from './LinkData';
+import SkillTable from '../SkillTable/SkillTable';
 
-function CardWrapper(props) {
-    const { name } = props;
-    return (
-        <Box height="100%" border="2px solid #f2f2f2" borderRadius="10px">
-             {(() => {
-                switch (name) {
-                    case ('info'): 
-                    return <Intro title="Web developer with a passion for Front End and UX" />;
-                    case ('interest'):
-                    return <Typography variant="h2">What I'm interested in currently</Typography>;
-                    case ('links'):
-                    return <Links links={LinkData} />;
-                    default:
-                    return <Typography variant="h2">No case found</Typography>;
-    
-                }
-            })()}
-        </Box>
-      );
+interface PageProps {
+  name: string;
 }
+
+const CardWrapper: FunctionComponent<PageProps> = (props) => {
+  const { name } = props;
+  return (
+    <Box>
+      {() => {
+        switch (name) {
+          case 'info':
+            return <Intro title="Web developer" />;
+          case 'interest':
+            return <Typography variant="h2">Interests</Typography>;
+          case 'links':
+            return <Links links={LinkData} />;
+          case 'work':
+            return <SkillTable />;
+          default:
+            return <Typography variant="h2">New Section</Typography>;
+        }
+      }}
+    </Box>
+  );
+};
+
+CardWrapper.defaultProps = {
+  name: 'info',
+};
 
 export default CardWrapper;
