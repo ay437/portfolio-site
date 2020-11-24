@@ -1,74 +1,74 @@
-export default class CardLayoutData {
+export default class LayoutGridData {
   static layout1 = [
     {
-      i: "a",
+      i: 'a',
       x: 0,
       y: 0,
       w: 3,
-      h: 3,
+      h: 4,
       static: true,
     },
     {
-      i: "b",
+      i: 'b',
       x: 3,
       y: 0,
       w: 6,
-      h: 1.5,
+      h: 2,
       static: true,
     },
     {
-      i: "c",
+      i: 'c',
       x: 9,
       y: 0,
       w: 3,
-      h: 1.5,
+      h: 2,
       static: true,
     },
     {
-      i: "d",
+      i: 'd',
       x: 3,
-      y: 1.5,
+      y: 2,
       w: 3,
-      h: 1.5,
+      h: 2,
       static: true,
     },
     {
-      i: "e",
+      i: 'e',
       x: 6,
-      y: 1.5,
+      y: 2,
       w: 6,
-      h: 3,
+      h: 3.5,
       static: true,
     },
     {
-      i: "f",
+      i: 'f',
       x: 0,
-      y: 3,
+      y: 4,
       w: 6,
       h: 1.5,
       static: true,
     },
     {
-      i: "g",
+      i: 'g',
       x: 0,
-      y: 4.5,
+      y: 5.5,
       w: 5,
-      h: 1.5,
+      h: 2,
       static: true,
     },
     {
-      i: "h",
+      i: 'h',
       x: 5,
-      y: 4.5,
+      y: 5.5,
       w: 7,
-      h: 1.5,
+      h: 2,
       static: true,
     },
   ];
 
   static layout2 = [
     {
-      i: "a",
+      i: 'a',
       x: 0,
       y: 0,
       w: 6,
@@ -76,7 +76,7 @@ export default class CardLayoutData {
       static: true,
     },
     {
-      i: "b",
+      i: 'b',
       x: 0,
       y: 3,
       w: 12,
@@ -84,7 +84,7 @@ export default class CardLayoutData {
       static: true,
     },
     {
-      i: "c",
+      i: 'c',
       x: 6,
       y: 0,
       w: 6,
@@ -92,7 +92,7 @@ export default class CardLayoutData {
       static: true,
     },
     {
-      i: "d",
+      i: 'd',
       x: 6,
       y: 1.5,
       w: 6,
@@ -100,7 +100,7 @@ export default class CardLayoutData {
       static: true,
     },
     {
-      i: "e",
+      i: 'e',
       x: 0,
       y: 4.5,
       w: 12,
@@ -108,7 +108,7 @@ export default class CardLayoutData {
       static: true,
     },
     {
-      i: "f",
+      i: 'f',
       x: 0,
       y: 6,
       w: 12,
@@ -116,7 +116,7 @@ export default class CardLayoutData {
       static: true,
     },
     {
-      i: "g",
+      i: 'g',
       x: 0,
       y: 7.5,
       w: 5,
@@ -124,7 +124,7 @@ export default class CardLayoutData {
       static: true,
     },
     {
-      i: "h",
+      i: 'h',
       x: 5,
       y: 7.5,
       w: 7,
@@ -135,7 +135,7 @@ export default class CardLayoutData {
 
   static layout3 = [
     {
-      i: "a",
+      i: 'a',
       x: 0,
       y: 0,
       w: 12,
@@ -143,7 +143,7 @@ export default class CardLayoutData {
       static: true,
     },
     {
-      i: "b",
+      i: 'b',
       x: 0,
       y: 2,
       w: 12,
@@ -151,7 +151,7 @@ export default class CardLayoutData {
       static: true,
     },
     {
-      i: "c",
+      i: 'c',
       x: 0,
       y: 4,
       w: 12,
@@ -159,7 +159,7 @@ export default class CardLayoutData {
       static: true,
     },
     {
-      i: "d",
+      i: 'd',
       x: 0,
       y: 6,
       w: 12,
@@ -167,7 +167,7 @@ export default class CardLayoutData {
       static: true,
     },
     {
-      i: "e",
+      i: 'e',
       x: 0,
       y: 8,
       w: 12,
@@ -175,7 +175,7 @@ export default class CardLayoutData {
       static: true,
     },
     {
-      i: "f",
+      i: 'f',
       x: 0,
       y: 10,
       w: 12,
@@ -183,7 +183,7 @@ export default class CardLayoutData {
       static: true,
     },
     {
-      i: "g",
+      i: 'g',
       x: 0,
       y: 12,
       w: 12,
@@ -191,7 +191,7 @@ export default class CardLayoutData {
       static: true,
     },
     {
-      i: "h",
+      i: 'h',
       x: 0,
       y: 14,
       w: 12,

@@ -5,7 +5,7 @@ import {
   makeStyles,
 } from '@material-ui/core/styles';
 import theme from '../themeprovider/theme/index';
-import CardLayout from '../components/CardLayout/CardLayout';
+import Layout from '../components/Layout/Layout';
 import Nav from '../components/Nav/Nav';
 
 const useStyles = makeStyles(() => createStyles({
@@ -18,7 +18,8 @@ const useStyles = makeStyles(() => createStyles({
       margin: '0 60px',
     },
     [theme.breakpoints.up('xl')]: {
-      margin: '0 20%',
+      maxWidth: '1600px',
+      margin: '0 auto',
     },
   },
 }));
@@ -29,7 +30,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Nav homepage />
       <Box className={classes.outerPadding}>
-        <CardLayout altLayout={false} />
+        <Layout altLayout={false} />
       </Box>
     </ThemeProvider>
   );

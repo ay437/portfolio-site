@@ -2,17 +2,16 @@ import React, { FunctionComponent } from 'react';
 import { Typography, Box } from '@material-ui/core';
 import Intro from '../Intro/Intro';
 import Links from '../Links/Links';
-import LinkData from './LinkData';
 import SkillTable from '../SkillTable/SkillTable';
 
 interface PageProps {
   name: string;
 }
 
-const CardWrapper: FunctionComponent<PageProps> = (props) => {
+const CardWrapper: FunctionComponent<PageProps> = (props: PageProps) => {
   const { name } = props;
   return (
-    <Box>
+    <Box height="100%">
       {() => {
         switch (name) {
           case 'info':
@@ -20,7 +19,7 @@ const CardWrapper: FunctionComponent<PageProps> = (props) => {
           case 'interest':
             return <Typography variant="h2">Interests</Typography>;
           case 'links':
-            return <Links links={LinkData} />;
+            return <Links />;
           case 'work':
             return <SkillTable />;
           default:
@@ -29,10 +28,6 @@ const CardWrapper: FunctionComponent<PageProps> = (props) => {
       }}
     </Box>
   );
-};
-
-CardWrapper.defaultProps = {
-  name: 'info',
 };
 
 export default CardWrapper;
