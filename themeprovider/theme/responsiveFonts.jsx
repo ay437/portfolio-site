@@ -8,6 +8,12 @@ const responsiveFonts = (theme) => ({
       fontSize: '30px',
       fontWeight: 600,
     },
+    h2: {
+      fontFamily: 'Montserrat',
+      fontStyle: 'normal',
+      fontSize: '24px',
+      fontWeight: 600,
+    },
     body1: {
       fontFamily: 'Esteban',
       fontStyle: 'normal',

@@ -1,7 +1,7 @@
 import * as colors from './colorPalette';
 
 const {
-  coreRed, coreWaterBlue, coreBlue, coreWhite,
+  coreRed, coreBlue, coreWhite,
 } = colors;
 
 export default {
@@ -10,10 +10,7 @@ export default {
       default: coreWhite,
     },
     primary: {
-      main: coreBlue,
-      '&$disabled': {
-        color: coreWaterBlue,
-      },
+      main: '#2A3036',
     },
     secondary: {
       main: '#ffffff',

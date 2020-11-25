@@ -1,7 +1,7 @@
 const LayoutContentData = [
   {
     id: 'a',
-    name: 'info',
+    name: 'cover',
     style: 'one',
   },
   {
@@ -11,7 +11,7 @@ const LayoutContentData = [
   },
   {
     id: 'c',
-    name: 'hello',
+    name: 'intro',
     style: 'three',
   },
   {

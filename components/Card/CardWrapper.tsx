@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { Typography, Box } from '@material-ui/core';
+import Cover from '../Cover/Cover';
 import Intro from '../Intro/Intro';
 import Links from '../Links/Links';
 import SkillTable from '../SkillTable/SkillTable';
@@ -14,8 +15,10 @@ const CardWrapper: FunctionComponent<PageProps> = (props: PageProps) => {
     <Box height="100%">
       {() => {
         switch (name) {
-          case 'info':
-            return <Intro title="Product Developer with strong passion for UX Design" />;
+          case 'cover':
+            return <Cover title="Product Developer with strong passion for UX Design" />;
+          case 'intro':
+            return <Intro title="Hi there, I'm Arjun 👋" />;
           case 'interest':
             return <Typography variant="h1">Interests</Typography>;
           case 'links':
