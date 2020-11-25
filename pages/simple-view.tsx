@@ -7,6 +7,7 @@ import {
 import theme from '../themeprovider/theme/index';
 import Layout from '../components/Layout/Layout';
 import Nav from '../components/Nav/Nav';
+import BottomNav from '../components/BottomNav/BottomNav';
 
 const useStyles = makeStyles(() => createStyles({
   outerPadding: {
@@ -25,6 +26,7 @@ function SimpleView() {
       <Box className={classes.outerPadding}>
         <Layout altLayout />
       </Box>
+      <BottomNav homepage={false} />
     </ThemeProvider>
   );
 }
