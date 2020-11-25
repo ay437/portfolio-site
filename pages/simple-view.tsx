@@ -10,13 +10,7 @@ import Nav from '../components/Nav/Nav';
 
 const useStyles = makeStyles(() => createStyles({
   outerPadding: {
-    margin: '0 20px',
-    [theme.breakpoints.up('sm')]: {
-      margin: '0 40px',
-    },
-    [theme.breakpoints.up('md')]: {
-      margin: '0 60px',
-    },
+    margin: '0 30px',
     [theme.breakpoints.up('xl')]: {
       maxWidth: '1600px',
     },

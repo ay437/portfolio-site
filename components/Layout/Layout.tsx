@@ -2,7 +2,6 @@ import React, {
   useEffect, ReactChild, ReactChildren,
 } from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
-import { Box } from '@material-ui/core';
 import AOS from 'aos';
 import CardWrapper from '../Card/CardWrapper';
 import LayoutData from './LayoutGridData';
@@ -67,9 +66,7 @@ export default function Layout(props: AltLayout) {
               key={sectionData.id}
               className={`fade-in ${sectionData.style}`}
             >
-              <Box height="100%" border="2px solid #f2f2f2" borderRadius="16px" bgcolor="#fffdd0">
-                <CardWrapper name={sectionData.name} />
-              </Box>
+              <CardWrapper name={sectionData.name} />
             </div>
           )
           : (
@@ -77,9 +74,7 @@ export default function Layout(props: AltLayout) {
               key={sectionData.id}
               data-aos={sectionData.dataAos}
             >
-              <Box height="100%" border="2px solid #f2f2f2" borderRadius="16px" bgcolor="#fffdd0">
-                <CardWrapper name={sectionData.name} />
-              </Box>
+              <CardWrapper name={sectionData.name} />
             </div>
           )))}
       </ResponsiveGridLayout>

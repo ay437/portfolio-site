@@ -15,15 +15,15 @@ const CardWrapper: FunctionComponent<PageProps> = (props: PageProps) => {
       {() => {
         switch (name) {
           case 'info':
-            return <Intro title="Web developer" />;
+            return <Intro title="Product Developer with strong passion for UX Design" />;
           case 'interest':
-            return <Typography variant="h2">Interests</Typography>;
+            return <Typography variant="h1">Interests</Typography>;
           case 'links':
             return <Links />;
           case 'work':
             return <SkillTable />;
           default:
-            return <Typography variant="h2">New Section</Typography>;
+            return <Typography variant="h1">New Section</Typography>;
         }
       }}
     </Box>

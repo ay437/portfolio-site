@@ -3,8 +3,10 @@ import {
   createStyles,
   makeStyles,
 } from '@material-ui/core/styles';
+import {
+  Button, Typography, Box,
+} from '@material-ui/core';
 import { useRouter } from 'next/router';
-import Button from '@material-ui/core/Button';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Image from 'next/image';
@@ -28,6 +30,12 @@ const useStyles = makeStyles(() => createStyles({
       maxWidth: '1600px',
     },
   },
+  buttons: {
+    display: 'none',
+    [theme.breakpoints.up('md')]: {
+      display: 'block',
+    },
+  },
 }));
 
 function SearchAppBar(props) {
@@ -45,18 +53,24 @@ function SearchAppBar(props) {
     <div className={classes.root}>
       <AppBar position="static" className={classes.appBar}>
         <Toolbar className={classes.toolBar}>
-          <Image
-            src="/logo-black.png"
-            alt="logo"
-            width={165}
-            height={60}
-          />
-          <Button href={href} variant="outlined" color="primary" onClick={handleClick}>
-            Say Hello
-          </Button>
-          <Button href={href} variant="outlined" color="primary" onClick={handleClick}>
-            Change view
-          </Button>
+          <Box display="flex" justifyContent="space-between" alignItems="center" width="100%" ml={3} mr={3}>
+            <Box display="flex">
+              <Image
+                src="/logo-black.png"
+                alt="logo"
+                width={165}
+                height={60}
+              />
+            </Box>
+            <Box display="flex" className={classes.buttons}>
+              <Button href={href} variant="outlined" color="primary" onClick={handleClick}>
+                <Typography variant="body1">Say Hello!</Typography>
+              </Button>
+              <Button href={href} variant="outlined" color="primary" onClick={handleClick}>
+                <Typography variant="body1">Change View</Typography>
+              </Button>
+            </Box>
+          </Box>
         </Toolbar>
       </AppBar>
     </div>

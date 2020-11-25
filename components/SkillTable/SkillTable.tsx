@@ -51,15 +51,23 @@ const SkillTable: FunctionComponent<PageProps> = () => {
   };
 
   return (
-    <Box>
-      <Typography variant="h2">My Technical Experience</Typography>
-      {!error
+    <Box
+      border="2px solid #2A3036"
+      borderRadius="16px"
+      height="100%"
+      display="flex"
+      flexDirection="column"
+      justifyContent="space-evenly"
+    >
+      <Box padding="0 20px">
+        <Typography variant="h1">My Technical Experience</Typography>
+        {!error
         && (skills.length === 0 ? (
           <Button onClick={fetchRequest}>See my skills</Button>
         ) : (
           <Button onClick={() => setSkills([])}>Hide my skills</Button>
         ))}
-      {!error && skills.length > 0 && (
+        {!error && skills.length > 0 && (
         <Box>
           <form onSubmit={handleSubmit}>
             <Input
@@ -83,12 +91,13 @@ const SkillTable: FunctionComponent<PageProps> = () => {
             <DataGrid rows={skills} columns={infoColumns} pageSize={5} />
           </Box>
         </Box>
-      )}
-      {error && (
+        )}
+        {error && (
         <Typography variant="body1">
           Currently no information available, but coming soon!
         </Typography>
-      )}
+        )}
+      </Box>
     </Box>
   );
 };
