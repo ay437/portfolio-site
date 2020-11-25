@@ -52,6 +52,7 @@ const SkillTable: FunctionComponent<PageProps> = () => {
 
   return (
     <Box
+      bgcolor="white"
       border="2px solid #2A3036"
       borderRadius="16px"
       height="100%"
