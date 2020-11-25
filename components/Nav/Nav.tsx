@@ -26,7 +26,7 @@ const useStyles = makeStyles(() => createStyles({
     width: '100%',
     paddingLeft: '0',
     paddingRight: '0',
-    [theme.breakpoints.up('xl')]: {
+    [theme.breakpoints.up('lg')]: {
       maxWidth: '1600px',
     },
   },

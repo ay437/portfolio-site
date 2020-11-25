@@ -12,7 +12,7 @@ import BottomNav from '../components/BottomNav/BottomNav';
 const useStyles = makeStyles(() => createStyles({
   outerPadding: {
     margin: '0',
-    [theme.breakpoints.up('xl')]: {
+    [theme.breakpoints.up('lg')]: {
       maxWidth: '1600px',
       margin: '0 auto',
     },

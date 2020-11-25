@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { Box } from '@material-ui/core';
+import { createStyles, makeStyles } from '@material-ui/core/styles';
+import theme from '../../themeprovider/theme/index';
 
 export interface LinkItem {
   id: number;
@@ -13,7 +15,29 @@ export interface LinkProps {
   links: LinkItem[];
 }
 
+const useStyles = makeStyles(() => createStyles({
+  topIcons: {
+    paddingTop: '80px',
+    [theme.breakpoints.up('md')]: {
+      paddingTop: '40px',
+    },
+    [theme.breakpoints.up('lg')]: {
+      paddingTop: '80px',
+    },
+  },
+  bottomIcons: {
+    paddingBottom: '80px',
+    [theme.breakpoints.up('md')]: {
+      paddingBottom: '40px',
+    },
+    [theme.breakpoints.up('lg')]: {
+      paddingBottom: '80px',
+    },
+  },
+}));
+
 function Links() {
+  const classes = useStyles();
   return (
     <Box
       borderRadius="16px"
@@ -24,33 +48,33 @@ function Links() {
       flexWrap="wrap"
       alignItems="center"
     >
-      <Box paddingTop="80px" paddingLeft="20px">
+      <Box className={classes.topIcons} paddingLeft="20px">
         <a href="https://www.linkedin.com/in/arjunpyadav/">
           <Image src="/instagram.svg" alt="LinkedIn" width={40} height={40} />
         </a>
       </Box>
-      <Box paddingTop="80px">
+      <Box className={classes.topIcons}>
         <a href="https://www.linkedin.com/in/arjunpyadav/">
           <Image src="/instagram.svg" alt="LinkedIn" width={40} height={40} />
         </a>
       </Box>
-      <Box paddingTop="80px" paddingRight="20px">
+      <Box className={classes.topIcons} paddingRight="20px">
         <a href="https://www.linkedin.com/in/arjunpyadav/">
           <Image src="/instagram.svg" alt="LinkedIn" width={40} height={40} />
         </a>
       </Box>
       <Box flexBasis="100%" height="0" />
-      <Box paddingBottom="80px" paddingLeft="20px">
+      <Box className={classes.bottomIcons} paddingLeft="20px">
         <a href="https://www.linkedin.com/in/arjunpyadav/">
           <Image src="/instagram.svg" alt="LinkedIn" width={40} height={40} />
         </a>
       </Box>
-      <Box paddingBottom="80px">
+      <Box className={classes.bottomIcons}>
         <a href="https://www.linkedin.com/in/arjunpyadav/">
           <Image src="/instagram.svg" alt="LinkedIn" width={40} height={40} />
         </a>
       </Box>
-      <Box paddingBottom="80px" paddingRight="20px">
+      <Box className={classes.bottomIcons} paddingRight="20px">
         <a href="https://www.linkedin.com/in/arjunpyadav/">
           <Image src="/instagram.svg" alt="LinkedIn" width={40} height={40} />
         </a>
