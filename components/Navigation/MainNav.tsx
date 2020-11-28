@@ -12,6 +12,10 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Image from 'next/image';
 import theme from '../../themeprovider/theme/index';
 
+interface MainNavProps {
+  homepage: boolean;
+}
+
 const useStyles = makeStyles(() => createStyles({
   root: {
     flexGrow: 1,
@@ -38,14 +42,13 @@ const useStyles = makeStyles(() => createStyles({
   },
 }));
 
-function SearchAppBar(props) {
+function MainNav(props: MainNavProps) {
   const classes = useStyles();
   const router = useRouter();
   const { homepage } = props;
-  const href = '/';
+  const href = homepage ? '/simple-view' : '/';
   const handleClick = (e) => {
     e.preventDefault();
-    const href = homepage ? '/simple-view' : '/';
     router.push(href);
   };
 
@@ -77,4 +80,4 @@ function SearchAppBar(props) {
   );
 }
 
-export default SearchAppBar;
+export default MainNav;

@@ -2,11 +2,11 @@ import React from 'react';
 import { Box, Link } from '@material-ui/core';
 import { useRouter } from 'next/router';
 
-interface PageProps {
+interface CloseButtonProps {
   closeButton: boolean;
 }
 
-const CloseButton = (props: PageProps) => {
+const CloseButton = (props: CloseButtonProps) => {
   const { closeButton } = props;
   const router = useRouter();
   const href = '/';

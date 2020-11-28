@@ -3,7 +3,7 @@ import React, {
 } from 'react';
 import AOS from 'aos';
 import { Box } from '@material-ui/core';
-import CardWrapper from '../Card/CardWrapper';
+import CardWrapper from '../../CardWrapper/CardWrapper';
 
 export interface Children {
   children: ReactChild | ReactChildren;

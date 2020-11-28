@@ -3,9 +3,9 @@ import React, {
 } from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
 import AOS from 'aos';
-import CardWrapper from '../Card/CardWrapper';
-import LayoutData from './LayoutGridData';
-import ContentData from './LayoutContentData';
+import CardWrapper from '../../CardWrapper/CardWrapper';
+import LayoutData from './HomeLayoutGridData';
+import ContentData from './HomeLayoutContentData';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 

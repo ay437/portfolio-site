@@ -2,7 +2,11 @@ import React from 'react';
 import { Typography, Box } from '@material-ui/core';
 import Image from 'next/image';
 
-function Cover(props) {
+interface CoverProps {
+  title: string;
+}
+
+function Cover(props: CoverProps) {
   const { title } = props;
   return (
     <Box

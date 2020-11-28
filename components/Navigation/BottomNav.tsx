@@ -6,6 +6,10 @@ import { Typography, Box, Button } from '@material-ui/core';
 import { useRouter } from 'next/router';
 import theme from '../../themeprovider/theme/index';
 
+interface BottomNavProps {
+  homepage: boolean;
+}
+
 const useStyles = makeStyles(() => createStyles({
   appBar: {
     top: 'auto',
@@ -22,14 +26,13 @@ const useStyles = makeStyles(() => createStyles({
   },
 }));
 
-export default function BottomAppBar(props) {
+export default function BottomAppBar(props: BottomNavProps) {
   const classes = useStyles();
   const router = useRouter();
   const { homepage } = props;
-  const href = '/';
+  const href = homepage ? '/simple-view' : '/';
   const handleClick = (e) => {
     e.preventDefault();
-    const href = homepage ? '/simple-view' : '/';
     router.push(href);
   };
 

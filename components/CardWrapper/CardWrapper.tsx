@@ -1,10 +1,9 @@
 import React, { FunctionComponent } from 'react';
-import { Typography, Box } from '@material-ui/core';
+import { Box } from '@material-ui/core';
 import CloseButton from '../CloseButton/CloseButton';
 import Cover from '../Cover/Cover';
 import Intro from '../Intro/Intro';
 import Links from '../Links/Links';
-import SkillTable from '../SkillTable/SkillTable';
 
 interface PageProps {
   name: string;
@@ -24,15 +23,15 @@ const CardWrapper: FunctionComponent<PageProps> = (props: PageProps) => {
             case 'intro':
               return <Intro title="Hi there, I'm Arjun 👋" />;
             case 'interest':
-              return <Typography variant="h1">Interests</Typography>;
+              return <Links />;
             case 'links':
               return <Links />;
             case 'work':
-              return <SkillTable />;
+              return <Links />;
             case 'exampleContent':
-              return <Intro title="Hi there, I'm Arjun 👋" />;
+              return <Links />;
             default:
-              return <Typography variant="h1">New Section</Typography>;
+              return <Links />;
           }
         }}
       </Box>

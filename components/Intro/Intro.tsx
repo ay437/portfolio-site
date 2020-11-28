@@ -5,6 +5,10 @@ import {
   makeStyles,
 } from '@material-ui/core/styles';
 
+interface IntroProps {
+  title: string;
+}
+
 const useStyles = makeStyles(() => createStyles({
   hoverStyle: {
     '&:hover': {
@@ -13,7 +17,7 @@ const useStyles = makeStyles(() => createStyles({
   },
 }));
 
-function Intro(props) {
+function Intro(props: IntroProps) {
   const { title } = props;
   const classes = useStyles();
   return (

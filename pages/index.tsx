@@ -5,9 +5,9 @@ import {
   makeStyles,
 } from '@material-ui/core/styles';
 import theme from '../themeprovider/theme/index';
-import Layout from '../components/Layout/Layout';
-import Nav from '../components/Nav/Nav';
-import BottomNav from '../components/BottomNav/BottomNav';
+import Layout from '../components/Layouts/HomeLayout/HomeLayout';
+import MainNav from '../components/Navigation/MainNav';
+import BottomNav from '../components/Navigation/BottomNav';
 
 const useStyles = makeStyles(() => createStyles({
   outerPadding: {
@@ -23,7 +23,7 @@ function App() {
   const classes = useStyles();
   return (
     <ThemeProvider theme={theme}>
-      <Nav homepage />
+      <MainNav homepage />
       <Box className={classes.outerPadding}>
         <Layout altLayout={false} />
       </Box>
