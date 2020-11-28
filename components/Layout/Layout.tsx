@@ -66,7 +66,7 @@ export default function Layout(props: AltLayout) {
               key={sectionData.id}
               className={`fade-in ${sectionData.style}`}
             >
-              <CardWrapper name={sectionData.name} />
+              <CardWrapper name={sectionData.name} closeButton={false} />
             </div>
           )
           : (
@@ -74,7 +74,7 @@ export default function Layout(props: AltLayout) {
               key={sectionData.id}
               data-aos={sectionData.dataAos}
             >
-              <CardWrapper name={sectionData.name} />
+              <CardWrapper name={sectionData.name} closeButton={false} />
             </div>
           )))}
       </ResponsiveGridLayout>
