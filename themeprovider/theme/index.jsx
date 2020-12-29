@@ -7,11 +7,11 @@ const theme = createMuiTheme({
   spacing: 10,
   breakpoints: {
     values: {
-      xs: 0,
-      sm: 481,
-      md: 767,
-      lg: 997,
-      xl: 1201,
+      xs: 481,
+      sm: 767,
+      md: 997,
+      lg: 1201,
+      xl: 1441,
     },
   },
 });

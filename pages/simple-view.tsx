@@ -8,12 +8,16 @@ import theme from '../themeprovider/theme/index';
 import Layout from '../components/Layouts/HomeLayout/HomeLayout';
 import MainNav from '../components/Navigation/MainNav';
 import BottomNav from '../components/Navigation/BottomNav';
+import MobileNav from '../components/Navigation/MobileNav';
 
 const useStyles = makeStyles(() => createStyles({
   outerPadding: {
-    margin: '0 30px',
-    [theme.breakpoints.up('lg')]: {
-      maxWidth: '1600px',
+    margin: '0 auto',
+    [theme.breakpoints.up('sm')]: {
+      margin: '0 20px',
+    },
+    [theme.breakpoints.up('xl')]: {
+      maxWidth: '1440px',
     },
   },
 }));
@@ -23,6 +27,7 @@ function SimpleView() {
   return (
     <ThemeProvider theme={theme}>
       <MainNav homepage={false} />
+      <MobileNav />
       <Box className={classes.outerPadding}>
         <Layout altLayout />
       </Box>

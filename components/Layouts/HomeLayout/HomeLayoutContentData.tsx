@@ -1,17 +1,17 @@
 const LayoutContentData = [
   {
     id: 'a',
-    name: 'cover',
+    name: 'intro',
     style: 'one',
   },
   {
     id: 'b',
-    name: 'interest',
+    name: 'article',
     style: 'two',
   },
   {
     id: 'c',
-    name: 'intro',
+    name: 'logo',
     style: 'three',
   },
   {
@@ -21,23 +21,23 @@ const LayoutContentData = [
   },
   {
     id: 'e',
-    name: 'work',
+    name: 'cover',
     style: 'five',
   },
   {
     id: 'f',
-    name: 'My skills',
+    name: 'my skills',
     dataAos: 'fade-in',
   },
   {
     id: 'g',
-    name: 'Testimonials',
+    name: 'testimonials',
     dataAos: 'fade-in',
 
   },
   {
     id: 'h',
-    name: 'Get in touch',
+    name: 'clients',
     dataAos: 'fade-in',
   },
 ];
