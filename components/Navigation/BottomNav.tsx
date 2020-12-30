@@ -1,9 +1,9 @@
 import React from 'react';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
-import { Typography, Box, Button, Link } from '@material-ui/core';
+import { Typography, Box, Link } from '@material-ui/core';
 import { useRouter } from 'next/router';
-import theme from '../../themeprovider/theme/index';
 import Image from 'next/image';
+import theme from '../../themeprovider/theme/index';
 
 interface BottomNavProps {
   homepage: boolean;
@@ -16,22 +16,22 @@ const useStyles = makeStyles(() => createStyles({
     overflow: 'hidden',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    backgroundImage: `url('/wave-footer-480.svg')`,
+    backgroundImage: 'url(\'/wave-footer-480.svg\')',
     display: 'flex',
     [theme.breakpoints.up('xs')]: {
-      backgroundImage: `url('/wave-footer-768.svg')`,
+      backgroundImage: 'url(\'/wave-footer-768.svg\')',
     },
     [theme.breakpoints.up('sm')]: {
-      backgroundImage: `url('/wave-footer-996.svg')`,
+      backgroundImage: 'url(\'/wave-footer-996.svg\')',
     },
     [theme.breakpoints.up('md')]: {
-      backgroundImage: `url('/wave-footer-1200.svg')`,
+      backgroundImage: 'url(\'/wave-footer-1200.svg\')',
     },
     [theme.breakpoints.up('lg')]: {
-      backgroundImage: `url('/wave-footer-1440.svg')`,
+      backgroundImage: 'url(\'/wave-footer-1440.svg\')',
     },
     [theme.breakpoints.up('xl')]: {
-      backgroundImage: `url('/wave-footer-wide.svg')`,
+      backgroundImage: 'url(\'/wave-footer-wide.svg\')',
     },
   },
   navWrapper: {
@@ -157,46 +157,47 @@ export default function BottomAppBar(props: BottomNavProps) {
 
   return (
     <>
-     <div
-      className={classes.root}>
+      <div
+        className={classes.root}
+      >
         <Box className={classes.navWrapper}>
-            <Box className={classes.navItemsOne}>
-              <Link href="/simple-view" className={classes.navLinks}><Typography variant="h3" color="secondary">HOME</Typography></Link>
-              <Link href="/simple-view" className={classes.navLinks}><Typography variant="h3" color="secondary">PROJECTS</Typography></Link>
-              <Link href="/simple-view" className={classes.navLinks}><Typography variant="h3" color="secondary">BLOG</Typography></Link>
-              <Link href="/simple-view" className={classes.navLinks}><Typography variant="h3" color="secondary">INFO</Typography></Link>
+          <Box className={classes.navItemsOne}>
+            <Link href="/simple-view" className={classes.navLinks}><Typography variant="h3" color="secondary">HOME</Typography></Link>
+            <Link href="/simple-view" className={classes.navLinks}><Typography variant="h3" color="secondary">PROJECTS</Typography></Link>
+            <Link href="/simple-view" className={classes.navLinks}><Typography variant="h3" color="secondary">BLOG</Typography></Link>
+            <Link href="/simple-view" className={classes.navLinks}><Typography variant="h3" color="secondary">INFO</Typography></Link>
+          </Box>
+          <Box className={classes.navBreakOne}>
+            <Image
+              src="/footer-break.svg"
+              alt="footer-break"
+              width={17}
+              height={46}
+            />
+          </Box>
+          <Box className={classes.navItemsTwo}>
+            <Box className={classes.navItemsTwoInner}>
+              <Link href="/simple-view" className={classes.navLinks}><Typography variant="h3" color="secondary">INSTAGRAM</Typography></Link>
+              <Link href="/simple-view"><Typography variant="h3" color="secondary">TWITTER</Typography></Link>
             </Box>
-            <Box className={classes.navBreakOne}>
-              <Image
-                src="/footer-break.svg"
-                alt="footer-break"
-                width={17}
-                height={46}
-              />
-            </Box>
-            <Box className={classes.navItemsTwo}>
-              <Box className={classes.navItemsTwoInner}>
-                <Link href="/simple-view" className={classes.navLinks}><Typography variant="h3" color="secondary">INSTAGRAM</Typography></Link>
-                <Link href="/simple-view"><Typography variant="h3" color="secondary">TWITTER</Typography></Link>
-              </Box>
-              <Box className={classes.navItemsTwoInner}>
-                <Link href="/simple-view" className={classes.navLinks}><Typography variant="h3" color="secondary">LINKEDIN</Typography></Link>
-                <Link href="/simple-view"><Typography variant="h3" color="secondary">BEHANCE</Typography></Link>
-              </Box>
-            </Box>
-            <Box className={classes.navBreakTwo}>
-              <Image
-                src="/footer-break.svg"
-                alt="footer-break"
-                width={17}
-                height={46}
-              />
-            </Box>
-            <Box className={classes.navItemsThree}>
-              <Typography variant="h3" color="secondary">© Arjun Yadav 2020 All Rights Reserved</Typography>
+            <Box className={classes.navItemsTwoInner}>
+              <Link href="/simple-view" className={classes.navLinks}><Typography variant="h3" color="secondary">LINKEDIN</Typography></Link>
+              <Link href="/simple-view"><Typography variant="h3" color="secondary">BEHANCE</Typography></Link>
             </Box>
           </Box>
-          </div>
+          <Box className={classes.navBreakTwo}>
+            <Image
+              src="/footer-break.svg"
+              alt="footer-break"
+              width={17}
+              height={46}
+            />
+          </Box>
+          <Box className={classes.navItemsThree}>
+            <Typography variant="h3" color="secondary">© Arjun Yadav 2020 All Rights Reserved</Typography>
+          </Box>
+        </Box>
+      </div>
     </>
   );
 }

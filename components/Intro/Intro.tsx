@@ -14,45 +14,45 @@ interface IntroProps {
 
 const useStyles = makeStyles(() => createStyles({
   wrapper: {
-    display:"flex",
-    flexDirection:"row",
-    justifyContent:"center",
-    alignItems: "center",
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
     [theme.breakpoints.up('md')]: {
-      flexDirection:"column",
+      flexDirection: 'column',
     },
     '&:hover': {
       boxShadow: '12px 10px 22px 0px #CCE0DA',
     },
   },
   textWrapper: {
-    paddingLeft: "20px",
-    paddingRight: "0",
+    paddingLeft: '20px',
+    paddingRight: '0',
     [theme.breakpoints.up('xs')]: {
-      paddingLeft: "40px",
-      paddingRight: "40px",
+      paddingLeft: '40px',
+      paddingRight: '40px',
     },
   },
   waveWrapper: {
-    paddingLeft: "0",
-    paddingRight: "20px",
+    paddingLeft: '0',
+    paddingRight: '20px',
     [theme.breakpoints.up('xs')]: {
-      paddingLeft: "40px",
-      paddingRight: "40px",
+      paddingLeft: '40px',
+      paddingRight: '40px',
     },
   },
   heading: {
     fontWeight: 'normal',
-    fontFamily: 'Nunito Sans, serif'
+    fontFamily: 'Nunito Sans, serif',
   },
   wave: {
     fontSize: '40px',
     [theme.breakpoints.up('xs')]: {
-      fontSize: '50px'
+      fontSize: '50px',
     },
   },
   introCopy: {
-    fontSize: '17px'
+    fontSize: '17px',
   },
 }));
 

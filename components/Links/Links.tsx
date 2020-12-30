@@ -41,7 +41,7 @@ const useStyles = makeStyles(() => createStyles({
     '&:active': {
       filter: 'invert(0.5) sepia(1) hue-rotate(200deg) saturate(4) brightness(1)',
     },
-  }
+  },
 }));
 
 function Links() {
@@ -59,7 +59,7 @@ function Links() {
     >
       <Box className={classes.topIcons} paddingLeft="20px">
         <a href="mailto:arjun.prakash.yadav@gmail.com">
-          <Image src="/gmail.svg" alt="Gmail" width={40} height={40} className={classes.icon}/>
+          <Image src="/gmail.svg" alt="Gmail" width={40} height={40} className={classes.icon} />
         </a>
       </Box>
       <Box className={classes.topIcons}>

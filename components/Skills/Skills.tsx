@@ -19,10 +19,10 @@ const useStyles = makeStyles(() => createStyles({
     },
   },
   skillsDesktop: {
-    justifyContent: "space-evenly",
-    padding: "0 0 16px",
+    justifyContent: 'space-evenly',
+    padding: '0 0 16px',
     [theme.breakpoints.up('xs')]: {
-      padding: "0 24px 16px",
+      padding: '0 24px 16px',
     },
   },
   hideMobile: {
@@ -33,10 +33,10 @@ const useStyles = makeStyles(() => createStyles({
   },
   showMobile: {
     display: 'flex',
-    justifyContent: "space-evenly",
-    padding: "0",
+    justifyContent: 'space-evenly',
+    padding: '0',
     [theme.breakpoints.up('xs')]: {
-      padding: "0",
+      padding: '0',
     },
     [theme.breakpoints.up('sm')]: {
       display: 'none',
@@ -47,7 +47,7 @@ const useStyles = makeStyles(() => createStyles({
 function Skills() {
   const classes = useStyles();
   return (
-    <Box 
+    <Box
       borderRadius="16px"
       boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
       height="100%"
@@ -57,7 +57,7 @@ function Skills() {
       className={classes.root}
     >
       <Box display="flex" className={classes.header}>
-            <Typography variant="h2" color="primary">LET'S TALK SKILLS</Typography>
+        <Typography variant="h2" color="primary">LET'S TALK SKILLS</Typography>
       </Box>
       <Box
         display="flex"
@@ -72,10 +72,10 @@ function Skills() {
           <Image src="/nodejs.svg" alt="nodejs" width={84} height={45} />
         </Box>
         <Box className={classes.hideMobile}>
-          <Image src="/graphql.svg" alt="graphql" width={52} height={54} className={classes.hideMobile}/>
+          <Image src="/graphql.svg" alt="graphql" width={52} height={54} className={classes.hideMobile} />
         </Box>
         <Box className={classes.hideMobile}>
-          <Image src="/gatsby.svg" alt="gatsby" width={52} height={52} className={classes.hideMobile}/>
+          <Image src="/gatsby.svg" alt="gatsby" width={52} height={52} className={classes.hideMobile} />
         </Box>
       </Box>
       <Box
@@ -85,11 +85,11 @@ function Skills() {
         alignItems="center"
         className={classes.showMobile}
       >
-        <Image src="/nodejs.svg" alt="nodejs" width={84} height={45} className={classes.showMobile}/>
+        <Image src="/nodejs.svg" alt="nodejs" width={84} height={45} className={classes.showMobile} />
         <Box marginLeft="-24px">
-          <Image src="/graphql.svg" alt="graphql" width={52} height={54} className={classes.showMobile}/>
+          <Image src="/graphql.svg" alt="graphql" width={52} height={54} className={classes.showMobile} />
         </Box>
-        <Image src="/gatsby.svg" alt="gatsby" width={52} height={52} className={classes.showMobile}/>
+        <Image src="/gatsby.svg" alt="gatsby" width={52} height={52} className={classes.showMobile} />
       </Box>
     </Box>
   );

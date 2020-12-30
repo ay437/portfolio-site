@@ -11,7 +11,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const drawerWidth = 240;
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'row',
@@ -19,9 +19,9 @@ const useStyles = makeStyles(theme => ({
     marginTop: '-75px',
     paddingBottom: '27px',
     [theme.breakpoints.up('sm')]: {
-        marginTop: '0',
-        paddingBottom: '0',
-      },
+      marginTop: '0',
+      paddingBottom: '0',
+    },
   },
   drawer: {
     width: drawerWidth,
@@ -36,7 +36,7 @@ const useStyles = makeStyles(theme => ({
   },
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
-    width: drawerWidth
+    width: drawerWidth,
   },
   content: {
     flexGrow: 1,
@@ -49,67 +49,67 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function MobileNav() {
-  const categories = ['About', 'Projects', 'Blog', 'Contact', 'Change View']
+  const categories = ['About', 'Projects', 'Blog', 'Contact', 'Change View'];
   const classes = useStyles();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   function handleDrawerToggle() {
-    setMobileOpen(!mobileOpen)
+    setMobileOpen(!mobileOpen);
   }
-    const drawer = (
-        <div>
-        <List>
-            {categories.map((text) => (
-            <ListItem button key={text}>
-                <ListItemText primary={text} />
-            </ListItem>
-            ))}
-        </List>
-        </div>
-    );
-return (
+  const drawer = (
+    <div>
+      <List>
+        {categories.map((text) => (
+          <ListItem button key={text}>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </List>
+    </div>
+  );
+  return (
     <div className={classes.root}>
-        <IconButton
+      <IconButton
         color="inherit"
         aria-label="Open drawer"
         edge="start"
         onClick={handleDrawerToggle}
         className={classes.menuButton}
-        >
+      >
         <MenuIcon />
-        </IconButton>
-        <nav className={classes.drawer}>
-            <Hidden smUp implementation="css">
-            <Drawer
-                variant="temporary"
-                anchor="right"
-                open={mobileOpen}
-                onClose={handleDrawerToggle}
-                classes={{
-                paper: classes.drawerPaper,
-                }}
-                ModalProps={{
-                keepMounted: true,
-                }}
-            >
-                <IconButton onClick={handleDrawerToggle} className={classes.closeMenuButton}>
-                <CloseIcon/>
-                </IconButton>
-                {drawer}
-            </Drawer>
-            </Hidden>
-            <Hidden xsDown implementation="css">
-            <Drawer
-                className={classes.drawer}
-                variant="permanent"
-                classes={{
-                paper: classes.drawerPaper,
-                }}
-            >
-                <div className={classes.toolbar} />
-                {drawer}
-            </Drawer>  
-            </Hidden>
-        </nav>
+      </IconButton>
+      <nav className={classes.drawer}>
+        <Hidden smUp implementation="css">
+          <Drawer
+            variant="temporary"
+            anchor="right"
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            classes={{
+              paper: classes.drawerPaper,
+            }}
+            ModalProps={{
+              keepMounted: true,
+            }}
+          >
+            <IconButton onClick={handleDrawerToggle} className={classes.closeMenuButton}>
+              <CloseIcon />
+            </IconButton>
+            {drawer}
+          </Drawer>
+        </Hidden>
+        <Hidden xsDown implementation="css">
+          <Drawer
+            className={classes.drawer}
+            variant="permanent"
+            classes={{
+              paper: classes.drawerPaper,
+            }}
+          >
+            <div className={classes.toolbar} />
+            {drawer}
+          </Drawer>
+        </Hidden>
+      </nav>
     </div>
   );
 }

@@ -13,9 +13,9 @@ const useStyles = makeStyles(() => createStyles({
   iconWrapper: {
     flexDirection: 'column',
     height: '85px',
-    padding: "0 6px",
+    padding: '0 6px',
     [theme.breakpoints.up('xs')]: {
-      padding: "0 24px",
+      padding: '0 24px',
     },
     [theme.breakpoints.up('lg')]: {
       flexDirection: 'row',
@@ -46,14 +46,14 @@ function Clients() {
       flexDirection="column"
     >
       <Box display="flex" className={classes.header}>
-            <Typography variant="h2" color="primary">CLIENTS</Typography>
+        <Typography variant="h2" color="primary">CLIENTS</Typography>
       </Box>
       <Box
         display="flex"
         justifyContent="space-between"
         flexWrap="wrap"
         alignItems="center"
-        className={classes.iconWrapper} 
+        className={classes.iconWrapper}
       >
         <img src="/parliament.png" alt="parliament" className={classes.icon} />
         <img src="/realogy.png" alt="realogy" className={classes.icon} />

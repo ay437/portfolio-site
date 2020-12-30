@@ -1,6 +1,7 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { Box, Typography } from '@material-ui/core';
-import Slider from "react-slick";
+import Slider from 'react-slick';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 import theme from '../../themeprovider/theme/index';
 
@@ -69,7 +70,7 @@ export interface TestimonialProps extends Array<TestimonialItem> {
 
 function Testimonials(TestimonialData: TestimonialProps) {
   const classes = useStyles();
-  console.log(TestimonialData)
+  console.log(TestimonialData);
   const data = TestimonialData;
   const settings = {
     dots: true,
@@ -95,51 +96,51 @@ function Testimonials(TestimonialData: TestimonialProps) {
       flexDirection="column"
     >
       <Box className={classes.headerContainer}>
-          <Typography variant="h2" color="primary">TESTIMONIALS</Typography>
+        <Typography variant="h2" color="primary">TESTIMONIALS</Typography>
       </Box>
       <Box
         display="flex"
         padding="0 24px"
         className={classes.sliderContainer}
       >
-      <Slider {...settings}>
-        <Box>
-          <Typography variant="body1" color="primary" className={classes.shortText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit...“</Typography>
-          <Typography variant="body1" color="primary" className={classes.longText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.“</Typography>
-          <br />
-          <Typography variant="body1" color="primary">Person’s name</Typography>
-        </Box>
-        <Box>
-          <Typography variant="body1" color="primary" className={classes.shortText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit...“</Typography>
-          <Typography variant="body1" color="primary" className={classes.longText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.“</Typography>
-          <br />
-          <Typography variant="body1" color="primary">Person’s name</Typography>
-        </Box>
-        <Box>
-          <Typography variant="body1" color="primary" className={classes.shortText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit...“</Typography>
-          <Typography variant="body1" color="primary" className={classes.longText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.“</Typography>
-          <br />
-          <Typography variant="body1" color="primary">Person’s name</Typography>
-        </Box>
-        <Box>
-          <Typography variant="body1" color="primary" className={classes.shortText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit...“</Typography>
-          <Typography variant="body1" color="primary" className={classes.longText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.“</Typography>
-          <br />
-          <Typography variant="body1" color="primary">Person’s name</Typography>
-        </Box>
-        <Box>
-          <Typography variant="body1" color="primary" className={classes.shortText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit...“</Typography>
-          <Typography variant="body1" color="primary" className={classes.longText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.“</Typography>
-          <br />
-          <Typography variant="body1" color="primary">Person’s name</Typography>
-        </Box>
-        <Box>
-          <Typography variant="body1" color="primary" className={classes.shortText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit...“</Typography>
-          <Typography variant="body1" color="primary" className={classes.longText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.“</Typography>
-          <br />
-          <Typography variant="body1" color="primary">Person’s name</Typography>
-        </Box>
-      </Slider>
+        <Slider {...settings}>
+          <Box>
+            <Typography variant="body1" color="primary" className={classes.shortText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit...“</Typography>
+            <Typography variant="body1" color="primary" className={classes.longText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.“</Typography>
+            <br />
+            <Typography variant="body1" color="primary">Person’s name</Typography>
+          </Box>
+          <Box>
+            <Typography variant="body1" color="primary" className={classes.shortText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit...“</Typography>
+            <Typography variant="body1" color="primary" className={classes.longText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.“</Typography>
+            <br />
+            <Typography variant="body1" color="primary">Person’s name</Typography>
+          </Box>
+          <Box>
+            <Typography variant="body1" color="primary" className={classes.shortText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit...“</Typography>
+            <Typography variant="body1" color="primary" className={classes.longText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.“</Typography>
+            <br />
+            <Typography variant="body1" color="primary">Person’s name</Typography>
+          </Box>
+          <Box>
+            <Typography variant="body1" color="primary" className={classes.shortText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit...“</Typography>
+            <Typography variant="body1" color="primary" className={classes.longText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.“</Typography>
+            <br />
+            <Typography variant="body1" color="primary">Person’s name</Typography>
+          </Box>
+          <Box>
+            <Typography variant="body1" color="primary" className={classes.shortText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit...“</Typography>
+            <Typography variant="body1" color="primary" className={classes.longText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.“</Typography>
+            <br />
+            <Typography variant="body1" color="primary">Person’s name</Typography>
+          </Box>
+          <Box>
+            <Typography variant="body1" color="primary" className={classes.shortText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit...“</Typography>
+            <Typography variant="body1" color="primary" className={classes.longText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.“</Typography>
+            <br />
+            <Typography variant="body1" color="primary">Person’s name</Typography>
+          </Box>
+        </Slider>
       </Box>
     </Box>
   );

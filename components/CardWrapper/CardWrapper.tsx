@@ -5,7 +5,7 @@ import Cover from '../Cover/Cover';
 import Intro from '../Intro/Intro';
 import Links from '../Links/Links';
 import ArticleBanner from '../ArticleBanner/ArticleBanner';
-import MainLogo from '../MainLogo/MainLogo'
+import MainLogo from '../MainLogo/MainLogo';
 import Skills from '../Skills/Skills';
 import Clients from '../Clients/Clients';
 import Testimonials from '../Testimonial/Testimonial';

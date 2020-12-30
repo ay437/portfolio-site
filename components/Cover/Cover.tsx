@@ -6,11 +6,11 @@ import theme from '../../themeprovider/theme/index';
 const useStyles = makeStyles(() => createStyles({
   root: {
     background: 'linear-gradient(333.18deg, #000000 0.45%, #0E0E52 98.46%)',
-    flexDirection: "column",
-    justifyContent:"space-around",
+    flexDirection: 'column',
+    justifyContent: 'space-around',
     [theme.breakpoints.up('xs')]: {
-      flexDirection: "row",
-      justifyContent:"space-between",
+      flexDirection: 'row',
+      justifyContent: 'space-between',
     },
   },
   header: {
@@ -28,14 +28,14 @@ const useStyles = makeStyles(() => createStyles({
     },
   },
   imageWrapper: {
-    padding: "48px 90px",
+    padding: '48px 90px',
     [theme.breakpoints.up('xs')]: {
-      padding: "0 0 0 20px",
+      padding: '0 0 0 20px',
     },
     [theme.breakpoints.up('sm')]: {
-      padding: "0 20px",
+      padding: '0 20px',
     },
-  }, 
+  },
   profileImage: {
     width: '100px',
     height: 'auto',
@@ -48,21 +48,21 @@ const useStyles = makeStyles(() => createStyles({
   },
   circleOne: {
     background: 'linear-gradient(180deg, #654212 36.46%, rgba(101, 66, 18, 0) 100%)',
-    height: "90px",
-    width: "90px",
-    marginTop: "-70px",
-    marginLeft: "-30px",
+    height: '90px',
+    width: '90px',
+    marginTop: '-70px',
+    marginLeft: '-30px',
     [theme.breakpoints.up('xs')]: {
-      height: "135px",
-      width: "135px",
-      marginTop: "-50px",
-      marginLeft: "-40px",
+      height: '135px',
+      width: '135px',
+      marginTop: '-50px',
+      marginLeft: '-40px',
     },
     [theme.breakpoints.up('lg')]: {
-      height: "150px",
-      width: "150px",
-      marginTop: "-125px",
-      marginLeft: "-40px"
+      height: '150px',
+      width: '150px',
+      marginTop: '-125px',
+      marginLeft: '-40px',
     },
   },
   circleTwo: {
@@ -78,10 +78,10 @@ const useStyles = makeStyles(() => createStyles({
       marginLeft: '20px',
     },
     [theme.breakpoints.up('lg')]: {
-      height: "170px",
-      width: "170px",
-      marginTop: "-140px",
-      marginLeft: "40px"
+      height: '170px',
+      width: '170px',
+      marginTop: '-140px',
+      marginLeft: '40px',
     },
   },
 }));
@@ -110,8 +110,8 @@ function Cover(props: CoverProps) {
       </Box>
       <Box display="flex" className={classes.imageWrapper}>
         <Box display="flex" flexDirection="column" justifyContent="center" width="200px">
-          <Box bgcolor="#bbb" borderRadius="50%" className={classes.circleOne}/>
-          <Box bgcolor="green" borderRadius="50%" className={classes.circleTwo}/>
+          <Box bgcolor="#bbb" borderRadius="50%" className={classes.circleOne} />
+          <Box bgcolor="green" borderRadius="50%" className={classes.circleTwo} />
           <Box position="absolute">
             <img
               src="/headshot.svg"
