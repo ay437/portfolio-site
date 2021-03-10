@@ -27,7 +27,7 @@ const useStyles = makeStyles(() =>
   })
 );
 
-export default function BlogLayout(props: Name) {
+export default function ContentLayout(props: Name) {
   const classes = useStyles();
   const { name } = props;
 
@@ -40,7 +40,12 @@ export default function BlogLayout(props: Name) {
   }, []);
 
   return (
-    <Box data-aos="fade-in" margin="30px" className={classes.root}>
+    <Box
+      data-aos="fade-in"
+      margin="30px"
+      className={classes.root}
+      maxHeight="1000px"
+    >
       <CardWrapper name={name} closeButton />
     </Box>
   );

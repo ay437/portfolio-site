@@ -4,12 +4,12 @@ import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import { makeStyles } from '@material-ui/core/styles';
+import { Typography } from '@material-ui/core';
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,7 +17,6 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'row',
     justifyContent: 'flex-end',
     marginTop: '-75px',
-    paddingBottom: '27px',
     [theme.breakpoints.up('sm')]: {
       marginTop: '0',
       paddingBottom: '0',
@@ -34,9 +33,15 @@ const useStyles = makeStyles((theme) => ({
       display: 'none',
     },
   },
-  toolbar: theme.mixins.toolbar,
+  listItemText: {
+    fontWeight: 600,
+    fontSize: '18px',
+    color: '#09006B',
+    margin: '10px 20px',
+  },
   drawerPaper: {
     width: drawerWidth,
+    backgroundColor: '#E5E5E5',
   },
   content: {
     flexGrow: 1,
@@ -45,11 +50,12 @@ const useStyles = makeStyles((theme) => ({
   closeMenuButton: {
     marginRight: 'auto',
     marginLeft: 0,
+    color: '#09006B',
   },
 }));
 
 function MobileNav() {
-  const categories = ['About', 'Projects', 'Blog', 'Contact', 'Change View'];
+  const categories = ['Home', 'About', 'Work', 'Blog', 'Contact'];
   const classes = useStyles();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   function handleDrawerToggle() {
@@ -60,7 +66,9 @@ function MobileNav() {
       <List>
         {categories.map((text) => (
           <ListItem button key={text}>
-            <ListItemText primary={text} />
+            <Typography variant="body1" className={classes.listItemText}>
+              {text}
+            </Typography>
           </ListItem>
         ))}
       </List>
@@ -91,7 +99,10 @@ function MobileNav() {
               keepMounted: true,
             }}
           >
-            <IconButton onClick={handleDrawerToggle} className={classes.closeMenuButton}>
+            <IconButton
+              onClick={handleDrawerToggle}
+              className={classes.closeMenuButton}
+            >
               <CloseIcon />
             </IconButton>
             {drawer}
@@ -105,7 +116,7 @@ function MobileNav() {
               paper: classes.drawerPaper,
             }}
           >
-            <div className={classes.toolbar} />
+            <div />
             {drawer}
           </Drawer>
         </Hidden>

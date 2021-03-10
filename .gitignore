@@ -1,2 +1,8 @@
 node_modules
 .next
+.nextsendgrid.env
+sendgrid.env
+sendgrid.env
+sendgrid.env
+sendgrid.env
+.env

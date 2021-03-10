@@ -5,73 +5,59 @@ import Slider from 'react-slick';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 import theme from '../../themeprovider/theme/index';
 
-const useStyles = makeStyles(() => createStyles({
-  headerContainer: {
-    display: 'flex',
-    padding: '24px 24px 16px',
-    [theme.breakpoints.up('sm')]: {
-      padding: '32px 24px 20px',
+const useStyles = makeStyles(() =>
+  createStyles({
+    headerContainer: {
+      display: 'flex',
+      padding: '24px 24px 16px',
+      [theme.breakpoints.up('sm')]: {
+        padding: '32px 24px 20px',
+      },
     },
-  },
-  sliderContainer: {
-    height: '45%',
-    [theme.breakpoints.up('sm')]: {
-      height: '40%',
-    },
-    [theme.breakpoints.up('md')]: {
-      height: '35%',
-    },
-    [theme.breakpoints.up('lg')]: {
+    sliderContainer: {
       height: '45%',
+      [theme.breakpoints.up('sm')]: {
+        height: '40%',
+      },
+      [theme.breakpoints.up('md')]: {
+        height: '35%',
+      },
+      [theme.breakpoints.up('lg')]: {
+        height: '45%',
+      },
+      [theme.breakpoints.up('xl')]: {
+        height: '35%',
+      },
     },
-    [theme.breakpoints.up('xl')]: {
-      height: '35%',
-    },
-  },
-  shortText: {
-    display: 'block',
-    [theme.breakpoints.up('xs')]: {
-      display: 'none',
-    },
-    [theme.breakpoints.up('md')]: {
+    shortText: {
       display: 'block',
+      [theme.breakpoints.up('xs')]: {
+        display: 'none',
+      },
+      [theme.breakpoints.up('md')]: {
+        display: 'block',
+      },
+      [theme.breakpoints.up('lg')]: {
+        display: 'none',
+      },
     },
-    [theme.breakpoints.up('lg')]: {
+    longText: {
       display: 'none',
+      [theme.breakpoints.up('xs')]: {
+        display: 'block',
+      },
+      [theme.breakpoints.up('md')]: {
+        display: 'none',
+      },
+      [theme.breakpoints.up('lg')]: {
+        display: 'block',
+      },
     },
-  },
-  longText: {
-    display: 'none',
-    [theme.breakpoints.up('xs')]: {
-      display: 'block',
-    },
-    [theme.breakpoints.up('md')]: {
-      display: 'none',
-    },
-    [theme.breakpoints.up('lg')]: {
-      display: 'block',
-    },
-  },
-}));
+  })
+);
 
-export interface TestimonialItem {
-  id: number;
-  name: string;
-  text: string;
-  logo: string;
-}
-
-export interface TestimonialProps extends Array<TestimonialItem> {
-  id: number;
-  name: string;
-  text: string;
-  logo: string;
-}
-
-function Testimonials(TestimonialData: TestimonialProps) {
+function Testimonials() {
   const classes = useStyles();
-  console.log(TestimonialData);
-  const data = TestimonialData;
   const settings = {
     dots: true,
     infinite: true,
@@ -96,49 +82,137 @@ function Testimonials(TestimonialData: TestimonialProps) {
       flexDirection="column"
     >
       <Box className={classes.headerContainer}>
-        <Typography variant="h2" color="primary">TESTIMONIALS</Typography>
+        <Typography variant="h2" color="primary">
+          TESTIMONIALS
+        </Typography>
       </Box>
-      <Box
-        display="flex"
-        padding="0 24px"
-        className={classes.sliderContainer}
-      >
+      <Box display="flex" padding="0 24px" className={classes.sliderContainer}>
         <Slider {...settings}>
           <Box>
-            <Typography variant="body1" color="primary" className={classes.shortText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit...“</Typography>
-            <Typography variant="body1" color="primary" className={classes.longText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.“</Typography>
+            <Typography
+              variant="body1"
+              color="primary"
+              className={classes.shortText}
+            >
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit...“
+            </Typography>
+            <Typography
+              variant="body1"
+              color="primary"
+              className={classes.longText}
+            >
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore.“
+            </Typography>
             <br />
-            <Typography variant="body1" color="primary">Person’s name</Typography>
+            <Typography variant="body1" color="primary">
+              Person’s name
+            </Typography>
           </Box>
           <Box>
-            <Typography variant="body1" color="primary" className={classes.shortText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit...“</Typography>
-            <Typography variant="body1" color="primary" className={classes.longText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.“</Typography>
+            <Typography
+              variant="body1"
+              color="primary"
+              className={classes.shortText}
+            >
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit...“
+            </Typography>
+            <Typography
+              variant="body1"
+              color="primary"
+              className={classes.longText}
+            >
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore.“
+            </Typography>
             <br />
-            <Typography variant="body1" color="primary">Person’s name</Typography>
+            <Typography variant="body1" color="primary">
+              Person’s name
+            </Typography>
           </Box>
           <Box>
-            <Typography variant="body1" color="primary" className={classes.shortText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit...“</Typography>
-            <Typography variant="body1" color="primary" className={classes.longText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.“</Typography>
+            <Typography
+              variant="body1"
+              color="primary"
+              className={classes.shortText}
+            >
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit...“
+            </Typography>
+            <Typography
+              variant="body1"
+              color="primary"
+              className={classes.longText}
+            >
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore.“
+            </Typography>
             <br />
-            <Typography variant="body1" color="primary">Person’s name</Typography>
+            <Typography variant="body1" color="primary">
+              Person’s name
+            </Typography>
           </Box>
           <Box>
-            <Typography variant="body1" color="primary" className={classes.shortText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit...“</Typography>
-            <Typography variant="body1" color="primary" className={classes.longText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.“</Typography>
+            <Typography
+              variant="body1"
+              color="primary"
+              className={classes.shortText}
+            >
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit...“
+            </Typography>
+            <Typography
+              variant="body1"
+              color="primary"
+              className={classes.longText}
+            >
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore.“
+            </Typography>
             <br />
-            <Typography variant="body1" color="primary">Person’s name</Typography>
+            <Typography variant="body1" color="primary">
+              Person’s name
+            </Typography>
           </Box>
           <Box>
-            <Typography variant="body1" color="primary" className={classes.shortText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit...“</Typography>
-            <Typography variant="body1" color="primary" className={classes.longText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.“</Typography>
+            <Typography
+              variant="body1"
+              color="primary"
+              className={classes.shortText}
+            >
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit...“
+            </Typography>
+            <Typography
+              variant="body1"
+              color="primary"
+              className={classes.longText}
+            >
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore.“
+            </Typography>
             <br />
-            <Typography variant="body1" color="primary">Person’s name</Typography>
+            <Typography variant="body1" color="primary">
+              Person’s name
+            </Typography>
           </Box>
           <Box>
-            <Typography variant="body1" color="primary" className={classes.shortText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit...“</Typography>
-            <Typography variant="body1" color="primary" className={classes.longText}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.“</Typography>
+            <Typography
+              variant="body1"
+              color="primary"
+              className={classes.shortText}
+            >
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit...“
+            </Typography>
+            <Typography
+              variant="body1"
+              color="primary"
+              className={classes.longText}
+            >
+              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore.“
+            </Typography>
             <br />
-            <Typography variant="body1" color="primary">Person’s name</Typography>
+            <Typography variant="body1" color="primary">
+              Person’s name
+            </Typography>
           </Box>
         </Slider>
       </Box>

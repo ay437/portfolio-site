@@ -9,6 +9,8 @@ import MainLogo from '../MainLogo/MainLogo';
 import Skills from '../Skills/Skills';
 import Clients from '../Clients/Clients';
 import Testimonials from '../Testimonial/Testimonial';
+import About from '../About/About';
+import Contact from '../Contact/Contact';
 
 interface PageProps {
   name: string;
@@ -32,13 +34,19 @@ const CardWrapper: FunctionComponent<PageProps> = (props: PageProps) => {
             case 'links':
               return <Links />;
             case 'cover':
-              return <Cover title="I'M A PRODUCT DEVELOPER WITH A PASSION FOR UX DESIGN" />;
+              return (
+                <Cover title="I'M A PRODUCT DEVELOPER WITH A PASSION FOR UX DESIGN" />
+              );
             case 'my skills':
               return <Skills />;
             case 'testimonials':
               return <Testimonials />;
             case 'clients':
               return <Clients />;
+            case 'about me':
+              return <About />;
+            case 'contact me':
+              return <Contact />;
             default:
               return <Links />;
           }

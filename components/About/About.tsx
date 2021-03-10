@@ -1,0 +1,215 @@
+import React from 'react';
+import { Box, Typography, Button } from '@material-ui/core';
+import { createStyles, makeStyles } from '@material-ui/core/styles';
+import theme from '../../themeprovider/theme/index';
+
+export interface LinkItem {
+  id: number;
+  name: string;
+  url: string;
+  logo: string;
+}
+
+export interface LinkProps {
+  links: LinkItem[];
+}
+
+const useStyles = makeStyles(() =>
+  createStyles({
+    topIcons: {
+      paddingTop: '80px',
+      [theme.breakpoints.up('sm')]: {
+        paddingTop: '60px',
+      },
+    },
+    bottomIcons: {
+      paddingBottom: '80px',
+      [theme.breakpoints.up('sm')]: {
+        paddingBottom: '60px',
+      },
+    },
+    profileImage: {
+      width: '250px',
+      marginTop: '40px',
+      [theme.breakpoints.up('md')]: {
+        marginTop: '0',
+      },
+      [theme.breakpoints.up('lg')]: {
+        width: '469px',
+      },
+    },
+    aboutIntroWrapper: {
+      flexDirection: 'column-reverse',
+      [theme.breakpoints.up('md')]: {
+        flexDirection: 'row',
+      },
+    },
+    aboutIntroText: {
+      marginTop: '0',
+      [theme.breakpoints.up('lg')]: {
+        marginTop: '50px',
+      },
+    },
+    halfVerticalLine: {
+      display: 'none',
+      [theme.breakpoints.up('md')]: {
+        display: 'flex',
+      },
+    },
+    services: {
+      flexDirection: 'column',
+      [theme.breakpoints.up('sm')]: {
+        flexDirection: 'row',
+      },
+    },
+    servicesBreaks: {
+      margin: '0 20px',
+      transform: 'rotate(90deg)',
+      [theme.breakpoints.up('sm')]: {
+        margin: '0 40px',
+        transform: 'none',
+      },
+    },
+  })
+);
+
+function About() {
+  const classes = useStyles();
+  return (
+    <Box marginBottom="50px">
+      <Box
+        height="100%"
+        display="flex"
+        justifyContent="space-between"
+        className={classes.aboutIntroWrapper}
+      >
+        <Box marginRight="75px" textAlign="center">
+          <img
+            src="/about-profile.svg"
+            alt="profile"
+            className={classes.profileImage}
+          />
+        </Box>
+        <Box className={classes.aboutIntroText}>
+          <Box marginBottom="15px">
+            <Typography variant="h1" color="primary">
+              ABOUT ME
+            </Typography>
+          </Box>
+          <hr />
+          <Box marginTop="40px">
+            <Typography variant="body1" color="primary">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. At
+              imperdiet dui accumsan sit amet. Rhoncus aenean vel elit
+              scelerisque mauris pellentesque pulvinar pellentesque habitant.
+              Convallis convallis tellus id interdum. Elementum facilisis leo
+              vel fringilla est ullamcorper. Semper quis lectus nulla at. Orci
+              dapibus ultrices in iaculis. Lectus magna fringilla urna porttitor
+              rhoncus dolor. Vel eros donec ac odio tempor orci dapibus ultrices
+              in. Nunc congue nisi vitae suscipit tellus mauris. Interdum velit
+              euismod in pellentesque. Lacus laoreet non curabitur gravida arcu.
+              Adipiscing elit ut aliquam purus sit amet luctus.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. At
+              imperdiet dui accumsan sit amet. Rhoncus aenean vel elit
+              scelerisque mauris pellentesque pulvinar pellentesque habitant.
+              Convallis convallis tellus id interdum. Elementum facilisis leo
+              vel fringilla est ullamcorper. Semper quis lectus nulla at. Orci
+              dapibus ultrices in iaculis. Lectus magna fringilla urna porttitor
+              rhoncus dolor. Vel eros donec ac odio tempor orci dapibus ultrices
+              in.
+            </Typography>
+            <Box
+              marginLeft="70px"
+              marginTop="70px"
+              className={classes.halfVerticalLine}
+            >
+              <img
+                src="/half-vertical-line.svg"
+                alt="veritical-break"
+                width={2}
+                height={46}
+              />
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+      <Box marginTop="50px" textAlign="center">
+        <Typography variant="h1" color="primary">
+          SERVICES
+        </Typography>
+        <Box
+          display="flex"
+          justifyContent="space-between"
+          alignItems="center"
+          marginTop="70px"
+          marginBottom="70px"
+          textAlign="left"
+          className={classes.services}
+        >
+          <Box>
+            <Typography variant="h2" color="primary">
+              LOREM IPSUM
+            </Typography>
+            <br />
+            <Typography variant="body1" color="primary">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Typography>
+          </Box>
+          <Box className={classes.servicesBreaks}>
+            <img
+              src="/vertical-line.svg"
+              alt="veritical-break"
+              width={1}
+              height={97}
+            />
+          </Box>
+          <Box>
+            <Typography variant="h2" color="primary">
+              LOREM IPSUM
+            </Typography>
+            <br />
+            <Typography variant="body1" color="primary">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Typography>
+          </Box>
+          <Box className={classes.servicesBreaks}>
+            <img
+              src="/vertical-line.svg"
+              alt="veritical-break"
+              width={1}
+              height={97}
+            />
+          </Box>
+          <Box>
+            <Typography variant="h2" color="primary">
+              LOREM IPSUM
+            </Typography>
+            <br />
+            <Typography variant="body1" color="primary">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Typography>
+          </Box>
+        </Box>
+        <Button
+          variant="contained"
+          color="primary"
+          size="large"
+          href="/contact"
+        >
+          <Typography variant="h1" color="secondary">
+            GET IN TOUCH
+          </Typography>
+        </Button>
+      </Box>
+    </Box>
+  );
+}
+
+export default About;
