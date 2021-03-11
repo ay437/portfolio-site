@@ -1,6 +1,6 @@
 import React, { useEffect, ReactChild, ReactChildren } from 'react';
 import AOS from 'aos';
-import { Box } from '@material-ui/core';
+import Box from '@material-ui/core/Box';
 import CardWrapper from '../../CardWrapper/CardWrapper';
 
 export interface Children {

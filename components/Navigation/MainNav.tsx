@@ -1,7 +1,10 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
-import { Typography, Box, Link } from '@material-ui/core';
+import createStyles from '@material-ui/core/styles/createStyles';
+import makeStyles from '@material-ui/core/styles/makeStyles';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
+import Link from 'next/link';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Image from 'next/image';
@@ -56,6 +59,9 @@ const useStyles = makeStyles(() =>
         paddingLeft: '600px',
       },
     },
+    links: {
+      cursor: 'pointer',
+    },
     button: {
       background: '#000000',
       boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
@@ -82,28 +88,45 @@ function MainNav() {
             className={classes.innerNavContent}
           >
             <Box left="0">
-              <Image src="/logo-black.png" alt="logo" width={165} height={60} />
+              <Link href="/">
+                <Box className={classes.links}>
+                  <Image
+                    src="/logo-black.png"
+                    alt="logo"
+                    width={165}
+                    height={60}
+                  />
+                </Box>
+              </Link>
             </Box>
             <Box className={classes.navItems}>
               <Link href="/about">
-                <Typography variant="h3" color="primary">
-                  ABOUT
-                </Typography>
+                <Box className={classes.links}>
+                  <Typography variant="h3" color="primary">
+                    ABOUT
+                  </Typography>
+                </Box>
               </Link>
               <Link href="/work">
-                <Typography variant="h3" color="primary">
-                  WORK
-                </Typography>
+                <Box className={classes.links}>
+                  <Typography variant="h3" color="primary">
+                    WORK
+                  </Typography>
+                </Box>
               </Link>
               <Link href="/blog">
-                <Typography variant="h3" color="primary">
-                  BLOG
-                </Typography>
+                <Box className={classes.links}>
+                  <Typography variant="h3" color="primary">
+                    BLOG
+                  </Typography>
+                </Box>
               </Link>
               <Link href="/contact">
-                <Typography variant="h3" color="primary">
-                  CONTACT
-                </Typography>
+                <Box className={classes.links}>
+                  <Typography variant="h3" color="primary">
+                    CONTACT
+                  </Typography>
+                </Box>
               </Link>
             </Box>
           </Box>

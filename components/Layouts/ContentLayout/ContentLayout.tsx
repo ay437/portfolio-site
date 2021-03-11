@@ -1,7 +1,8 @@
 import React, { useEffect, ReactChild, ReactChildren } from 'react';
 import AOS from 'aos';
-import { Box } from '@material-ui/core';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
+import createStyles from '@material-ui/core/styles/createStyles';
+import makeStyles from '@material-ui/core/styles/makeStyles';
+import Box from '@material-ui/core/Box';
 import theme from '../../../themeprovider/theme';
 import CardWrapper from '../../CardWrapper/CardWrapper';
 

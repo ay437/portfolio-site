@@ -1,37 +1,41 @@
 import React from 'react';
-import { Box, Typography } from '@material-ui/core';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
+import createStyles from '@material-ui/core/styles/createStyles';
+import makeStyles from '@material-ui/core/styles/makeStyles';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 import theme from '../../themeprovider/theme/index';
 
-const useStyles = makeStyles(() => createStyles({
-  header: {
-    padding: '32px 24px',
-    [theme.breakpoints.up('sm')]: {
-      padding: '32px 24px 48px',
+const useStyles = makeStyles(() =>
+  createStyles({
+    header: {
+      padding: '32px 24px',
+      [theme.breakpoints.up('sm')]: {
+        padding: '32px 24px 48px',
+      },
     },
-  },
-  iconWrapper: {
-    flexDirection: 'column',
-    height: '85px',
-    padding: '0 6px',
-    [theme.breakpoints.up('xs')]: {
-      padding: '0 24px',
+    iconWrapper: {
+      flexDirection: 'column',
+      height: '85px',
+      padding: '0 6px',
+      [theme.breakpoints.up('xs')]: {
+        padding: '0 24px',
+      },
+      [theme.breakpoints.up('lg')]: {
+        flexDirection: 'row',
+        height: 'auto',
+      },
     },
-    [theme.breakpoints.up('lg')]: {
-      flexDirection: 'row',
-      height: 'auto',
+    icon: {
+      height: '29px',
+      [theme.breakpoints.up('xs')]: {
+        height: '35px',
+      },
+      [theme.breakpoints.up('xl')]: {
+        height: '40px',
+      },
     },
-  },
-  icon: {
-    height: '29px',
-    [theme.breakpoints.up('xs')]: {
-      height: '35px',
-    },
-    [theme.breakpoints.up('xl')]: {
-      height: '40px',
-    },
-  },
-}));
+  })
+);
 
 function Clients() {
   const classes = useStyles();
@@ -46,7 +50,9 @@ function Clients() {
       flexDirection="column"
     >
       <Box display="flex" className={classes.header}>
-        <Typography variant="h2" color="primary">CLIENTS</Typography>
+        <Typography variant="h2" color="primary">
+          CLIENTS
+        </Typography>
       </Box>
       <Box
         display="flex"

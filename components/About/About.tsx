@@ -1,6 +1,9 @@
 import React from 'react';
-import { Box, Typography, Button } from '@material-ui/core';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
+import createStyles from '@material-ui/core/styles/createStyles';
+import makeStyles from '@material-ui/core/styles/makeStyles';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
+import Button from '@material-ui/core/Button';
 import theme from '../../themeprovider/theme/index';
 
 export interface LinkItem {
@@ -16,18 +19,6 @@ export interface LinkProps {
 
 const useStyles = makeStyles(() =>
   createStyles({
-    topIcons: {
-      paddingTop: '80px',
-      [theme.breakpoints.up('sm')]: {
-        paddingTop: '60px',
-      },
-    },
-    bottomIcons: {
-      paddingBottom: '80px',
-      [theme.breakpoints.up('sm')]: {
-        paddingBottom: '60px',
-      },
-    },
     profileImage: {
       width: '250px',
       marginTop: '40px',

@@ -1,6 +1,9 @@
 import React from 'react';
-import { Typography, Box, Link } from '@material-ui/core';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
+import createStyles from '@material-ui/core/styles/createStyles';
+import makeStyles from '@material-ui/core/styles/makeStyles';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
+import Link from 'next/link';
 import theme from '../../themeprovider/theme/index';
 
 interface IntroProps {
@@ -16,6 +19,7 @@ const useStyles = makeStyles(() =>
       flexDirection: 'row',
       justifyContent: 'center',
       alignItems: 'center',
+      cursor: 'pointer',
       [theme.breakpoints.up('md')]: {
         flexDirection: 'column',
       },
@@ -59,7 +63,7 @@ function Intro(props: IntroProps) {
   const { title1, title2, wave } = props;
   const classes = useStyles();
   return (
-    <Link href="/about" underline="none">
+    <Link href="/about">
       <Box
         bgcolor="#000000"
         boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"

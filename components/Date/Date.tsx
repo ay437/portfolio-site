@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography } from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
 import { parseISO, format } from 'date-fns';
 
 export default function Date({ dateString }) {

@@ -1,6 +1,10 @@
 import React from 'react';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
-import { Typography, Box, Link } from '@material-ui/core';
+import createStyles from '@material-ui/core/styles/createStyles';
+import makeStyles from '@material-ui/core/styles/makeStyles';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
+import Link from 'next/link';
+import MuiLink from '@material-ui/core/Link';
 import Image from 'next/image';
 import theme from '../../themeprovider/theme/index';
 
@@ -111,6 +115,7 @@ const useStyles = makeStyles(() =>
     },
     navLinks: {
       marginRight: '20px',
+      cursor: 'pointer',
       [theme.breakpoints.up('xs')]: {
         marginRight: '40px',
       },
@@ -149,22 +154,26 @@ export default function BottomAppBar() {
       <div className={classes.root}>
         <Box className={classes.navWrapper}>
           <Box className={classes.navItemsOne}>
-            <Link href="/" className={classes.navLinks}>
-              <Typography variant="h3" color="secondary">
-                HOME
-              </Typography>
+            <Link href="/">
+              <Box className={classes.navLinks}>
+                <Typography variant="h3" color="secondary">
+                  HOME
+                </Typography>
+              </Box>
             </Link>
-            <Link href="/work" className={classes.navLinks}>
-              <Typography variant="h3" color="secondary">
-                WORK
-              </Typography>
+            <Link href="/work">
+              <Box className={classes.navLinks}>
+                <Typography variant="h3" color="secondary">
+                  WORK
+                </Typography>
+              </Box>
             </Link>
-            <Link href="/blog" className={classes.navLinks}>
+            <Link href="/blog">
               <Typography variant="h3" color="secondary">
                 BLOG
               </Typography>
             </Link>
-            <Link href="/contact" className={classes.navLinks}>
+            <Link href="/contact">
               <Typography variant="h3" color="secondary">
                 CONTACT
               </Typography>
@@ -180,28 +189,28 @@ export default function BottomAppBar() {
           </Box>
           <Box className={classes.navItemsTwo}>
             <Box className={classes.navItemsTwoInner}>
-              <Link href="/" className={classes.navLinks}>
+              <MuiLink href="/" className={classes.navLinks}>
                 <Typography variant="h3" color="secondary">
                   INSTAGRAM
                 </Typography>
-              </Link>
-              <Link href="/">
+              </MuiLink>
+              <MuiLink href="/">
                 <Typography variant="h3" color="secondary">
                   TWITTER
                 </Typography>
-              </Link>
+              </MuiLink>
             </Box>
             <Box className={classes.navItemsTwoInner}>
-              <Link href="/" className={classes.navLinks}>
+              <MuiLink href="/" className={classes.navLinks}>
                 <Typography variant="h3" color="secondary">
                   LINKEDIN
                 </Typography>
-              </Link>
-              <Link href="/">
+              </MuiLink>
+              <MuiLink href="/">
                 <Typography variant="h3" color="secondary">
                   BEHANCE
                 </Typography>
-              </Link>
+              </MuiLink>
             </Box>
           </Box>
           <Box className={classes.navBreakTwo}>

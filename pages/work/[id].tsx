@@ -1,7 +1,9 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
-import { Box, Typography } from '@material-ui/core';
+import createStyles from '@material-ui/core/styles/createStyles';
+import makeStyles from '@material-ui/core/styles/makeStyles';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 import Head from 'next/head';
 import theme from '../../themeprovider/theme/index';
 import Layout from '../../components/Layouts/Layout/Layout';

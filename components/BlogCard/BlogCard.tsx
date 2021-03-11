@@ -1,6 +1,9 @@
 import React from 'react';
-import { Typography, Box, Link } from '@material-ui/core';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
+import createStyles from '@material-ui/core/styles/createStyles';
+import makeStyles from '@material-ui/core/styles/makeStyles';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
+import Link from 'next/link';
 import theme from '../../themeprovider/theme/index';
 import Date from '../Date/Date';
 
@@ -16,6 +19,7 @@ const useStyles = makeStyles(() =>
       margin: '0 10px 20px 10px',
       overflow: 'hidden',
       flexDirection: 'column',
+      cursor: 'pointer',
       [theme.breakpoints.up('xs')]: {
         flexBasis: 'calc(50% - 25px)',
       },
@@ -71,33 +75,35 @@ export interface BlogItem {
 function BlogCard({ id, title, date, image, intro }: BlogItem) {
   const classes = useStyles();
   return (
-    <Link href={`/blog/${id}`} className={classes.root}>
-      <Box display="flex" width="100%">
-        <img src={image} alt="headshot" className={classes.blogImage} />
-      </Box>
-      <Box
-        display="flex"
-        flexDirection="column"
-        padding="20px"
-        className={classes.content}
-      >
-        <Typography variant="h2" color="primary" className={classes.header}>
-          {title}
-        </Typography>
-        <Typography
-          variant="body1"
-          color="primary"
-          className={classes.blogIntro}
+    <Link href={`/blog/${id}`}>
+      <Box className={classes.root}>
+        <Box display="flex" width="100%">
+          <img src={image} alt="headshot" className={classes.blogImage} />
+        </Box>
+        <Box
+          display="flex"
+          flexDirection="column"
+          padding="20px"
+          className={classes.content}
         >
-          {intro}
-        </Typography>
-        <Typography
-          variant="body1"
-          color="primary"
-          className={classes.blogIntro}
-        >
-          <Date dateString={date} />
-        </Typography>
+          <Typography variant="h2" color="primary" className={classes.header}>
+            {title}
+          </Typography>
+          <Typography
+            variant="body1"
+            color="primary"
+            className={classes.blogIntro}
+          >
+            {intro}
+          </Typography>
+          <Typography
+            variant="body1"
+            color="primary"
+            className={classes.blogIntro}
+          >
+            <Date dateString={date} />
+          </Typography>
+        </Box>
       </Box>
     </Link>
   );

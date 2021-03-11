@@ -6,3 +6,5 @@ sendgrid.env
 sendgrid.env
 sendgrid.env
 .env
+
+.vercel

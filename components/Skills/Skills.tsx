@@ -1,7 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-import { Box, Typography } from '@material-ui/core';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
+import createStyles from '@material-ui/core/styles/createStyles';
+import makeStyles from '@material-ui/core/styles/makeStyles';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 import theme from '../../themeprovider/theme/index';
 
 const useStyles = makeStyles(() => createStyles({

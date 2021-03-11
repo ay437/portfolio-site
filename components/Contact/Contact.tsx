@@ -5,8 +5,11 @@
 /* eslint-disable no-console */
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import { Box, Typography } from '@material-ui/core';
+import createStyles from '@material-ui/core/styles/createStyles';
+import makeStyles from '@material-ui/core/styles/makeStyles';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
+import { Theme } from '@material-ui/core';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

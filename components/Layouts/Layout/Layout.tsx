@@ -1,7 +1,9 @@
 import React, { ReactChild, ReactChildren } from 'react';
 import Head from 'next/head';
-import { ThemeProvider, Box } from '@material-ui/core';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
+import createStyles from '@material-ui/core/styles/createStyles';
+import makeStyles from '@material-ui/core/styles/makeStyles';
+import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
 import theme from '../../../themeprovider/theme';
 import MainNav from '../../Navigation/MainNav';
 import BottomNav from '../../Navigation/BottomNav';
@@ -31,7 +33,7 @@ export default function Layout(props: Children) {
   const classes = useStyles();
   const { children, title } = props;
   return (
-    <ThemeProvider theme={theme}>
+    <MuiThemeProvider theme={theme}>
       <Head>
         <title>{title}</title>
         <meta charSet="utf-8" />
@@ -41,6 +43,6 @@ export default function Layout(props: Children) {
       <MobileNav />
       <Box className={classes.outerPadding}>{children}</Box>
       <BottomNav />
-    </ThemeProvider>
+    </MuiThemeProvider>
   );
 }

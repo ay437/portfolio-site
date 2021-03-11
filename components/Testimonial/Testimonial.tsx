@@ -1,8 +1,10 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import { Box, Typography } from '@material-ui/core';
+import createStyles from '@material-ui/core/styles/createStyles';
+import makeStyles from '@material-ui/core/styles/makeStyles';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 import Slider from 'react-slick';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
 import theme from '../../themeprovider/theme/index';
 
 const useStyles = makeStyles(() =>

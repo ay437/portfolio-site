@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import { Box } from '@material-ui/core';
+import Box from '@material-ui/core/Box';
 import CloseButton from '../CloseButton/CloseButton';
 import Cover from '../Cover/Cover';
 import Intro from '../Intro/Intro';
