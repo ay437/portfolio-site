@@ -1,6 +1,5 @@
-import React, {
-  useEffect, ReactChild, ReactChildren,
-} from 'react';
+/* eslint-disable no-confusing-arrow */
+import React, { useEffect, ReactChild, ReactChildren } from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
 import AOS from 'aos';
 import CardWrapper from '../../CardWrapper/CardWrapper';
@@ -60,23 +59,28 @@ export default function Layout(props: AltLayout) {
           xxs: 12,
         }}
       >
-        {contentData.map((sectionData) => (sectionData.dataAos !== 'fade-in'
-          ? (
+        {contentData.map((sectionData) =>
+          sectionData.dataAos !== 'fade-in' ? (
             <div
               key={sectionData.id}
               className={`fade-in ${sectionData.style}`}
             >
-              <CardWrapper name={sectionData.name} closeButton={false} />
+              <CardWrapper
+                name={sectionData.name}
+                closeButton={false}
+                blogOrWork={false}
+              />
+            </div>
+          ) : (
+            <div key={sectionData.id} data-aos={sectionData.dataAos}>
+              <CardWrapper
+                name={sectionData.name}
+                closeButton={false}
+                blogOrWork={false}
+              />
             </div>
           )
-          : (
-            <div
-              key={sectionData.id}
-              data-aos={sectionData.dataAos}
-            >
-              <CardWrapper name={sectionData.name} closeButton={false} />
-            </div>
-          )))}
+        )}
       </ResponsiveGridLayout>
     </div>
   );
