@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
@@ -33,6 +34,23 @@ const useStyles = makeStyles((theme) => ({
       display: 'none',
     },
   },
+  listItemButton: {
+    '&:hover': {
+      '& p': {
+        color: 'rgb(85,172,238)',
+        fontWeight: '900',
+        position: 'relative',
+        '&:after': {
+          content: '""',
+          position: 'absolute',
+          left: '0',
+          right: '0',
+          bottom: '-3px',
+          borderBottom: '2px solid rgb(85,172,238)',
+        },
+      },
+    },
+  },
   listItemText: {
     fontWeight: 600,
     fontSize: '18px',
@@ -65,11 +83,13 @@ function MobileNav() {
     <div>
       <List>
         {categories.map((text) => (
-          <ListItem button key={text}>
-            <Typography variant="body1" className={classes.listItemText}>
-              {text}
-            </Typography>
-          </ListItem>
+          <Link href={`/${text.toLowerCase()}`}>
+            <ListItem button key={text} className={classes.listItemButton}>
+              <Typography variant="body1" className={classes.listItemText}>
+                {text}
+              </Typography>
+            </ListItem>
+          </Link>
         ))}
       </List>
     </div>

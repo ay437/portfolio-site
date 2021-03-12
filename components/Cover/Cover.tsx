@@ -17,20 +17,6 @@ const useStyles = makeStyles(() =>
         justifyContent: 'space-between',
       },
     },
-    header: {
-      fontSize: '16px',
-      marginBottom: '16px',
-      [theme.breakpoints.up('xs')]: {
-        fontSize: '20px',
-        marginBottom: '0',
-      },
-    },
-    seeMore: {
-      fontSize: '13px',
-      [theme.breakpoints.up('xs')]: {
-        fontSize: '16px',
-      },
-    },
     imageWrapper: {
       padding: '48px 90px',
       [theme.breakpoints.up('xs')]: {
@@ -52,6 +38,15 @@ const useStyles = makeStyles(() =>
     },
     aboutLink: {
       cursor: 'pointer',
+      transition: 'all .5s ease-in-out',
+      width: 'fit-content',
+      '&:hover': {
+        '& p': {
+          color: 'rgb(85,172,238)',
+          fontWeight: '500',
+          position: 'relative',
+        },
+      },
     },
     circleOne: {
       background:
@@ -112,22 +107,18 @@ function Cover(props: CoverProps) {
       display="flex"
       className={classes.root}
     >
-      <Box display="flex" padding="0 20px">
+      <Box display="flex" padding="0px 60px 0 40px">
         <Box
           display="flex"
           flexDirection="column"
           justifyContent="space-evenly"
         >
-          <Typography variant="h2" color="secondary" className={classes.header}>
+          <Typography variant="h2" color="secondary">
             {title}
           </Typography>
           <Link href="/about">
             <Box className={classes.aboutLink}>
-              <Typography
-                variant="body1"
-                color="secondary"
-                className={classes.seeMore}
-              >
+              <Typography variant="body2" color="secondary">
                 FIND OUT MORE ABOUT ME &gt;
               </Typography>
             </Box>

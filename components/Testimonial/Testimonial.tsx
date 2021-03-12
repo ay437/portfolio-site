@@ -11,9 +11,9 @@ const useStyles = makeStyles(() =>
   createStyles({
     headerContainer: {
       display: 'flex',
-      padding: '24px 24px 16px',
+      padding: '24px 40px 16px',
       [theme.breakpoints.up('sm')]: {
-        padding: '32px 24px 20px',
+        padding: '32px 40px 20px',
       },
     },
     sliderContainer: {
@@ -92,14 +92,14 @@ function Testimonials() {
         <Slider {...settings}>
           <Box>
             <Typography
-              variant="body1"
+              variant="body2"
               color="primary"
               className={classes.shortText}
             >
               “Lorem ipsum dolor sit amet, consectetur adipiscing elit...“
             </Typography>
             <Typography
-              variant="body1"
+              variant="body2"
               color="primary"
               className={classes.longText}
             >
@@ -107,20 +107,20 @@ function Testimonials() {
               eiusmod tempor incididunt ut labore.“
             </Typography>
             <br />
-            <Typography variant="body1" color="primary">
+            <Typography variant="caption" color="primary">
               Person’s name
             </Typography>
           </Box>
           <Box>
             <Typography
-              variant="body1"
+              variant="body2"
               color="primary"
               className={classes.shortText}
             >
               “Lorem ipsum dolor sit amet, consectetur adipiscing elit...“
             </Typography>
             <Typography
-              variant="body1"
+              variant="body2"
               color="primary"
               className={classes.longText}
             >
@@ -128,20 +128,20 @@ function Testimonials() {
               eiusmod tempor incididunt ut labore.“
             </Typography>
             <br />
-            <Typography variant="body1" color="primary">
+            <Typography variant="caption" color="primary">
               Person’s name
             </Typography>
           </Box>
           <Box>
             <Typography
-              variant="body1"
+              variant="body2"
               color="primary"
               className={classes.shortText}
             >
               “Lorem ipsum dolor sit amet, consectetur adipiscing elit...“
             </Typography>
             <Typography
-              variant="body1"
+              variant="body2"
               color="primary"
               className={classes.longText}
             >
@@ -149,20 +149,20 @@ function Testimonials() {
               eiusmod tempor incididunt ut labore.“
             </Typography>
             <br />
-            <Typography variant="body1" color="primary">
+            <Typography variant="caption" color="primary">
               Person’s name
             </Typography>
           </Box>
           <Box>
             <Typography
-              variant="body1"
+              variant="body2"
               color="primary"
               className={classes.shortText}
             >
               “Lorem ipsum dolor sit amet, consectetur adipiscing elit...“
             </Typography>
             <Typography
-              variant="body1"
+              variant="body2"
               color="primary"
               className={classes.longText}
             >
@@ -170,20 +170,20 @@ function Testimonials() {
               eiusmod tempor incididunt ut labore.“
             </Typography>
             <br />
-            <Typography variant="body1" color="primary">
+            <Typography variant="caption" color="primary">
               Person’s name
             </Typography>
           </Box>
           <Box>
             <Typography
-              variant="body1"
+              variant="body2"
               color="primary"
               className={classes.shortText}
             >
               “Lorem ipsum dolor sit amet, consectetur adipiscing elit...“
             </Typography>
             <Typography
-              variant="body1"
+              variant="body2"
               color="primary"
               className={classes.longText}
             >
@@ -191,20 +191,20 @@ function Testimonials() {
               eiusmod tempor incididunt ut labore.“
             </Typography>
             <br />
-            <Typography variant="body1" color="primary">
+            <Typography variant="caption" color="primary">
               Person’s name
             </Typography>
           </Box>
           <Box>
             <Typography
-              variant="body1"
+              variant="body2"
               color="primary"
               className={classes.shortText}
             >
               “Lorem ipsum dolor sit amet, consectetur adipiscing elit...“
             </Typography>
             <Typography
-              variant="body1"
+              variant="body2"
               color="primary"
               className={classes.longText}
             >
@@ -212,7 +212,7 @@ function Testimonials() {
               eiusmod tempor incididunt ut labore.“
             </Typography>
             <br />
-            <Typography variant="body1" color="primary">
+            <Typography variant="caption" color="primary">
               Person’s name
             </Typography>
           </Box>

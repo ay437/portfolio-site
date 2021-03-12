@@ -5,7 +5,7 @@ import { parseISO, format } from 'date-fns';
 export default function Date({ dateString }) {
   const date = parseISO(dateString);
   return (
-    <Typography variant="body1" color="primary">
+    <Typography variant="body2" color="primary">
       <time dateTime={dateString}>{format(date, 'LLLL d, yyyy')}</time>
     </Typography>
   );

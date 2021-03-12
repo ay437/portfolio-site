@@ -19,6 +19,20 @@ export interface LinkProps {
 
 const useStyles = makeStyles(() =>
   createStyles({
+    header: {
+      fontSize: '2.1875rem',
+      fontWeight: 500,
+    },
+    subHeader: {
+      fontWeight: 700,
+    },
+    button: {
+      marginTop: '40px',
+      padding: '20px 40px',
+    },
+    buttonText: {
+      fontWeight: 500,
+    },
     profileImage: {
       width: '250px',
       marginTop: '40px',
@@ -83,7 +97,7 @@ function About() {
         </Box>
         <Box className={classes.aboutIntroText}>
           <Box marginBottom="15px">
-            <Typography variant="h1" color="primary">
+            <Typography variant="h1" color="primary" className={classes.header}>
               ABOUT ME
             </Typography>
           </Box>
@@ -129,7 +143,7 @@ function About() {
         </Box>
       </Box>
       <Box marginTop="50px" textAlign="center">
-        <Typography variant="h1" color="primary">
+        <Typography variant="h1" color="primary" className={classes.header}>
           SERVICES
         </Typography>
         <Box
@@ -142,7 +156,11 @@ function About() {
           className={classes.services}
         >
           <Box>
-            <Typography variant="h2" color="primary">
+            <Typography
+              variant="body1"
+              color="primary"
+              className={classes.subHeader}
+            >
               LOREM IPSUM
             </Typography>
             <br />
@@ -160,7 +178,11 @@ function About() {
             />
           </Box>
           <Box>
-            <Typography variant="h2" color="primary">
+            <Typography
+              variant="body1"
+              color="primary"
+              className={classes.subHeader}
+            >
               LOREM IPSUM
             </Typography>
             <br />
@@ -178,7 +200,11 @@ function About() {
             />
           </Box>
           <Box>
-            <Typography variant="h2" color="primary">
+            <Typography
+              variant="body1"
+              color="primary"
+              className={classes.subHeader}
+            >
               LOREM IPSUM
             </Typography>
             <br />
@@ -193,8 +219,13 @@ function About() {
           color="primary"
           size="large"
           href="/contact"
+          className={classes.button}
         >
-          <Typography variant="h1" color="secondary">
+          <Typography
+            variant="h2"
+            color="secondary"
+            className={classes.buttonText}
+          >
             GET IN TOUCH
           </Typography>
         </Button>

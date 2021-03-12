@@ -116,6 +116,19 @@ const useStyles = makeStyles(() =>
     navLinks: {
       marginRight: '20px',
       cursor: 'pointer',
+      transition: 'all .5s ease-in-out',
+      width: 'fit-content',
+      '&:hover': {
+        textDecoration: 'none',
+        '& span': {
+          color: 'rgb(129 159 255)',
+          position: 'relative',
+        },
+        '& h4': {
+          color: 'rgb(129 159 255)',
+          position: 'relative',
+        },
+      },
       [theme.breakpoints.up('xs')]: {
         marginRight: '40px',
       },
@@ -156,27 +169,31 @@ export default function BottomAppBar() {
           <Box className={classes.navItemsOne}>
             <Link href="/">
               <Box className={classes.navLinks}>
-                <Typography variant="h3" color="secondary">
+                <Typography variant="overline" color="secondary">
                   HOME
                 </Typography>
               </Box>
             </Link>
             <Link href="/work">
               <Box className={classes.navLinks}>
-                <Typography variant="h3" color="secondary">
+                <Typography variant="overline" color="secondary">
                   WORK
                 </Typography>
               </Box>
             </Link>
             <Link href="/blog">
-              <Typography variant="h3" color="secondary">
-                BLOG
-              </Typography>
+              <Box className={classes.navLinks}>
+                <Typography variant="overline" color="secondary">
+                  BLOG
+                </Typography>
+              </Box>
             </Link>
             <Link href="/contact">
-              <Typography variant="h3" color="secondary">
-                CONTACT
-              </Typography>
+              <Box className={classes.navLinks}>
+                <Typography variant="overline" color="secondary">
+                  CONTACT
+                </Typography>
+              </Box>
             </Link>
           </Box>
           <Box className={classes.navBreakOne}>
@@ -190,24 +207,24 @@ export default function BottomAppBar() {
           <Box className={classes.navItemsTwo}>
             <Box className={classes.navItemsTwoInner}>
               <MuiLink href="/" className={classes.navLinks}>
-                <Typography variant="h3" color="secondary">
+                <Typography variant="h4" color="secondary">
                   INSTAGRAM
                 </Typography>
               </MuiLink>
-              <MuiLink href="/">
-                <Typography variant="h3" color="secondary">
+              <MuiLink href="/" className={classes.navLinks}>
+                <Typography variant="h4" color="secondary">
                   TWITTER
                 </Typography>
               </MuiLink>
             </Box>
             <Box className={classes.navItemsTwoInner}>
               <MuiLink href="/" className={classes.navLinks}>
-                <Typography variant="h3" color="secondary">
+                <Typography variant="h4" color="secondary">
                   LINKEDIN
                 </Typography>
               </MuiLink>
-              <MuiLink href="/">
-                <Typography variant="h3" color="secondary">
+              <MuiLink href="/" className={classes.navLinks}>
+                <Typography variant="h4" color="secondary">
                   BEHANCE
                 </Typography>
               </MuiLink>

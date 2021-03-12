@@ -8,9 +8,9 @@ import theme from '../../themeprovider/theme/index';
 const useStyles = makeStyles(() =>
   createStyles({
     header: {
-      padding: '32px 24px',
+      padding: '32px 40px',
       [theme.breakpoints.up('sm')]: {
-        padding: '32px 24px 48px',
+        padding: '32px 40px 48px',
       },
     },
     iconWrapper: {
@@ -18,7 +18,7 @@ const useStyles = makeStyles(() =>
       height: '85px',
       padding: '0 6px',
       [theme.breakpoints.up('xs')]: {
-        padding: '0 24px',
+        padding: '0 40px',
       },
       [theme.breakpoints.up('lg')]: {
         flexDirection: 'row',

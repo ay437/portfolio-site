@@ -15,13 +15,14 @@ import Contact from '../Contact/Contact';
 interface PageProps {
   name: string;
   closeButton: boolean;
+  blogOrWork: boolean;
 }
 
 const CardWrapper: FunctionComponent<PageProps> = (props: PageProps) => {
-  const { name, closeButton } = props;
+  const { name, closeButton, blogOrWork } = props;
   return (
     <Box height="100%">
-      <CloseButton closeButton={closeButton} />
+      <CloseButton closeButton={closeButton} blogOrWork={blogOrWork} />
       <Box>
         {() => {
           switch (name) {

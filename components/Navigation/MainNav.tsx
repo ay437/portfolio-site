@@ -5,6 +5,7 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Image from 'next/image';
@@ -61,6 +62,20 @@ const useStyles = makeStyles(() =>
     },
     links: {
       cursor: 'pointer',
+      transition: 'all .5s ease-in-out',
+      '&.active': {
+        '& h3': {
+          color: '#1607ba',
+          fontWeight: 600,
+        },
+      },
+      '&:hover': {
+        '& h3': {
+          color: '#1607ba',
+          fontWeight: 600,
+          position: 'relative',
+        },
+      },
     },
     button: {
       background: '#000000',
@@ -76,6 +91,7 @@ const useStyles = makeStyles(() =>
 
 function MainNav() {
   const classes = useStyles();
+  const router = useRouter();
 
   return (
     <div className={classes.root}>
@@ -101,28 +117,44 @@ function MainNav() {
             </Box>
             <Box className={classes.navItems}>
               <Link href="/about">
-                <Box className={classes.links}>
+                <Box
+                  className={`${classes.links} ${
+                    router.pathname === '/about' ? 'active' : ''
+                  }`}
+                >
                   <Typography variant="h3" color="primary">
                     ABOUT
                   </Typography>
                 </Box>
               </Link>
               <Link href="/work">
-                <Box className={classes.links}>
+                <Box
+                  className={`${classes.links} ${
+                    router.pathname === '/work' ? 'active' : ''
+                  }`}
+                >
                   <Typography variant="h3" color="primary">
                     WORK
                   </Typography>
                 </Box>
               </Link>
               <Link href="/blog">
-                <Box className={classes.links}>
+                <Box
+                  className={`${classes.links} ${
+                    router.pathname === '/blog' ? 'active' : ''
+                  }`}
+                >
                   <Typography variant="h3" color="primary">
                     BLOG
                   </Typography>
                 </Box>
               </Link>
               <Link href="/contact">
-                <Box className={classes.links}>
+                <Box
+                  className={`${classes.links} ${
+                    router.pathname === '/contact' ? 'active' : ''
+                  }`}
+                >
                   <Typography variant="h3" color="primary">
                     CONTACT
                   </Typography>

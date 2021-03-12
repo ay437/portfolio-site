@@ -27,24 +27,22 @@ const useStyles = makeStyles((theme: Theme) =>
       height: '550px',
       [theme.breakpoints.up('md')]: {
         float: 'right',
-        width: '80%',
+        width: '81%',
         height: '700px',
         flexDirection: 'row',
         justifyContent: 'space-between',
       },
+      [theme.breakpoints.up('lg')]: {
+        width: '85%',
+      },
     },
     image: {
       display: 'none',
-      [theme.breakpoints.up('sm')]: {
-        display: 'flex',
-        marginLeft: '300px',
-        width: '250px',
-        marginTop: '-50px',
-      },
       [theme.breakpoints.up('md')]: {
         marginLeft: '-175px',
         marginTop: '0',
         width: '349px',
+        display: 'flex',
       },
     },
     contactWrapper: {
@@ -55,6 +53,9 @@ const useStyles = makeStyles((theme: Theme) =>
       [theme.breakpoints.up('md')]: {
         padding: '0 50px',
       },
+    },
+    header: {
+      fontWeight: 500,
     },
     textArea: {
       fontSize: '16px',
@@ -223,10 +224,10 @@ const Contact = () => {
         flexDirection="column"
         className={classes.contactWrapper}
       >
-        <Typography variant="h1" color="primary">
+        <Typography variant="h2" color="primary" className={classes.header}>
           CONTACT
         </Typography>
-        <Typography variant="body1" color="primary">
+        <Typography variant="body2" color="primary">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </Typography>

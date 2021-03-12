@@ -43,18 +43,11 @@ const useStyles = makeStyles(() =>
         paddingRight: '40px',
       },
     },
-    heading: {
-      fontWeight: 'normal',
-      fontFamily: 'Nunito Sans, serif',
-    },
     wave: {
       fontSize: '40px',
       [theme.breakpoints.up('xs')]: {
         fontSize: '50px',
       },
-    },
-    introCopy: {
-      fontSize: '17px',
     },
   })
 );
@@ -77,37 +70,21 @@ function Intro(props: IntroProps) {
           className={classes.textWrapper}
         >
           <Box>
-            <Typography
-              variant="h1"
-              color="secondary"
-              className={classes.heading}
-            >
+            <Typography variant="h1" color="secondary">
               {title1}
             </Typography>
-            <Typography
-              variant="h1"
-              color="secondary"
-              className={classes.heading}
-            >
+            <Typography variant="h1" color="secondary">
               {title2}
             </Typography>
           </Box>
           <Box padding="30px 0">
-            <Typography
-              variant="body1"
-              color="secondary"
-              className={classes.introCopy}
-            >
+            <Typography variant="body2" color="secondary">
               I’m a Front End Developer with skills ranging across React,
               Javascript, Node and UX.
             </Typography>
           </Box>
           <Box>
-            <Typography
-              variant="body1"
-              color="secondary"
-              className={classes.introCopy}
-            >
+            <Typography variant="body2" color="secondary">
               Based in London.
             </Typography>
           </Box>

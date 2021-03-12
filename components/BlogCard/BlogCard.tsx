@@ -43,11 +43,8 @@ const useStyles = makeStyles(() =>
       },
     },
     header: {
-      fontSize: '16px',
+      fontSize: '1.25rem',
       marginBottom: '16px',
-      [theme.breakpoints.up('md')]: {
-        fontSize: '20px',
-      },
     },
     blogIntro: {
       marginBottom: '16px',
@@ -86,18 +83,18 @@ function BlogCard({ id, title, date, image, intro }: BlogItem) {
           padding="20px"
           className={classes.content}
         >
-          <Typography variant="h2" color="primary" className={classes.header}>
+          <Typography variant="h3" color="primary" className={classes.header}>
             {title}
           </Typography>
           <Typography
-            variant="body1"
+            variant="body2"
             color="primary"
             className={classes.blogIntro}
           >
             {intro}
           </Typography>
           <Typography
-            variant="body1"
+            variant="body2"
             color="primary"
             className={classes.blogIntro}
           >

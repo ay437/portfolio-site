@@ -39,12 +39,8 @@ const useStyles = makeStyles(() =>
         backgroundColor: '#e5e5e5',
       },
     },
-    articleButtonText: {
-      fontSize: '16px',
-    },
     articleHeading: {
-      width: '210px',
-      fontSize: '30px',
+      width: '240px',
     },
   })
 );
@@ -74,16 +70,12 @@ function ArticleBanner() {
         >
           <Box className={classes.articleWrapper}>
             <Button className={classes.articleButton}>
-              <Typography
-                variant="h4"
-                color="primary"
-                className={classes.articleButtonText}
-              >
+              <Typography variant="button" color="primary">
                 ARTICLE
               </Typography>
             </Button>
             <Typography
-              variant="h3"
+              variant="h1"
               color="secondary"
               className={classes.articleHeading}
             >

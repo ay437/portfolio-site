@@ -1,9 +1,6 @@
 import React, { useEffect, ReactChild, ReactChildren } from 'react';
 import AOS from 'aos';
-import createStyles from '@material-ui/core/styles/createStyles';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 import Box from '@material-ui/core/Box';
-import theme from '../../../themeprovider/theme';
 import CardWrapper from '../../CardWrapper/CardWrapper';
 
 export interface Children {
@@ -14,22 +11,7 @@ export interface Name {
   name: string;
 }
 
-const useStyles = makeStyles(() =>
-  createStyles({
-    root: {
-      height: '150vw',
-      [theme.breakpoints.up('xs')]: {
-        height: '110vw',
-      },
-      [theme.breakpoints.up('sm')]: {
-        height: '100vw',
-      },
-    },
-  })
-);
-
 export default function BlogLayout(props: Name) {
-  const classes = useStyles();
   const { name } = props;
 
   useEffect(() => {
@@ -41,7 +23,7 @@ export default function BlogLayout(props: Name) {
   }, []);
 
   return (
-    <Box data-aos="fade-in" margin="30px" className={classes.root}>
+    <Box data-aos="fade-in" margin="30px 30px 60px">
       <CardWrapper name={name} closeButton />
     </Box>
   );
