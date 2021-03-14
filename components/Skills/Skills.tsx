@@ -14,7 +14,7 @@ const useStyles = makeStyles(() =>
       filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
     },
     header: {
-      padding: '20px 40px',
+      padding: '24px 20px',
       [theme.breakpoints.up('xs')]: {
         padding: '32px 40px',
       },

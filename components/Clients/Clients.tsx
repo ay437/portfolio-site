@@ -8,17 +8,27 @@ import theme from '../../themeprovider/theme/index';
 const useStyles = makeStyles(() =>
   createStyles({
     header: {
-      padding: '32px 40px',
+      padding: '24px 20px 16px',
+      [theme.breakpoints.up('xs')]: {
+        padding: '32px',
+      },
       [theme.breakpoints.up('sm')]: {
-        padding: '32px 40px 48px',
+        padding: '32px 40px',
       },
     },
     iconWrapper: {
       flexDirection: 'column',
-      height: '85px',
-      padding: '0 6px',
+      height: '140px',
+      padding: '0',
       [theme.breakpoints.up('xs')]: {
-        padding: '0 40px',
+        height: '85px',
+        padding: '0 12%',
+      },
+      [theme.breakpoints.up('sm')]: {
+        padding: '0 22%',
+      },
+      [theme.breakpoints.up('md')]: {
+        padding: '0 12%',
       },
       [theme.breakpoints.up('lg')]: {
         flexDirection: 'row',
@@ -26,7 +36,7 @@ const useStyles = makeStyles(() =>
       },
     },
     icon: {
-      height: '29px',
+      height: '26px',
       [theme.breakpoints.up('xs')]: {
         height: '35px',
       },

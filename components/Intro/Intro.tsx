@@ -35,6 +35,12 @@ const useStyles = makeStyles(() =>
         paddingRight: '40px',
       },
     },
+    introCopy: {
+      padding:"24px 0",
+      [theme.breakpoints.up('sm')]: {
+        padding:"30px 0",
+      },
+    },
     waveWrapper: {
       paddingLeft: '0',
       paddingRight: '20px',
@@ -77,7 +83,7 @@ function Intro(props: IntroProps) {
               {title2}
             </Typography>
           </Box>
-          <Box padding="30px 0">
+          <Box className={classes.introCopy}>
             <Typography variant="body2" color="secondary">
               I’m a Front End Developer with skills ranging across React,
               Javascript, Node and UX.

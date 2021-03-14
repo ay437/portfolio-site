@@ -20,15 +20,22 @@ export interface LinkProps {
 const useStyles = makeStyles(() =>
   createStyles({
     header: {
-      fontSize: '2.1875rem',
+      fontSize: '1.5rem',
       fontWeight: 500,
+      [theme.breakpoints.up('sm')]: {
+        fontSize: '2.1875rem',
+      },
     },
     subHeader: {
       fontWeight: 700,
     },
     button: {
       marginTop: '40px',
-      padding: '20px 40px',
+      padding: '12px 24px',
+      backgroundColor: '#000',
+      [theme.breakpoints.up('sm')]: {
+        padding: '20px 40px',
+      },
     },
     buttonText: {
       fontWeight: 500,
@@ -56,15 +63,23 @@ const useStyles = makeStyles(() =>
       },
     },
     halfVerticalLine: {
+      marginTop: '50px',
       display: 'none',
+      [theme.breakpoints.up('sm')]: {
+        marginTop: '70px'
+      },
       [theme.breakpoints.up('md')]: {
         display: 'flex',
       },
     },
     services: {
       flexDirection: 'column',
+      marginTop:"50px",
+      marginBottom:"50px",
       [theme.breakpoints.up('sm')]: {
         flexDirection: 'row',
+        marginTop:"70px",
+        marginBottom:"70px",
       },
     },
     servicesBreaks: {
@@ -129,7 +144,6 @@ function About() {
             </Typography>
             <Box
               marginLeft="70px"
-              marginTop="70px"
               className={classes.halfVerticalLine}
             >
               <img
@@ -150,8 +164,6 @@ function About() {
           display="flex"
           justifyContent="space-between"
           alignItems="center"
-          marginTop="70px"
-          marginBottom="70px"
           textAlign="left"
           className={classes.services}
         >

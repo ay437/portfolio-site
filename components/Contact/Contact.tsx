@@ -24,7 +24,10 @@ const useStyles = makeStyles((theme: Theme) =>
       width: '100%',
       flexDirection: 'column-reverse',
       justifyContent: 'flex-end',
-      height: '550px',
+      height: 'auto',
+      [theme.breakpoints.up('sm')]: {
+        height: '550px',
+      },
       [theme.breakpoints.up('md')]: {
         float: 'right',
         width: '81%',
@@ -46,7 +49,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     contactWrapper: {
-      padding: '25px',
+      padding: '32px',
       [theme.breakpoints.up('xs')]: {
         padding: '50px',
       },
@@ -56,11 +59,11 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     header: {
       fontWeight: 500,
+      marginBottom: '8px'
     },
     textArea: {
-      fontSize: '16px',
+      fontSize: '1rem',
       fontFamily: 'Nunito Sans',
-      //   color: '#293745',
       width: 'calc(100% - 28px)',
       padding: '14px',
       color: '#fff',
@@ -88,7 +91,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     textField: {
-      fontSize: '16px',
+      fontSize: '1rem',
       fontFamily: 'Nunito Sans',
       background: '#C4C4C4AB',
       border: 'none',
@@ -116,23 +119,28 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     submit: {
-      background: '#A47F43',
-      width: '225px',
-      height: '60px',
+      background: 'linear-gradient(100deg, #654212 35.23%, #A47F43 100.08%)',
+      width: '150px',
+      height: '40px',
       border: 'none',
       fontFamily: 'Nunito Sans',
       textTransform: 'uppercase',
       color: '#fff',
-      fontSize: '18px',
+      fontSize: '1rem',
       cursor: 'pointer',
+      [theme.breakpoints.up('sm')]: {
+        width: '225px',
+        height: '60px',
+        fontSize: '1.125rem',
+      },
       '&:hover': {
-        backgroundColor: '#A47F4380',
+        background: 'linear-gradient(100deg, #65421297 35.23%, #A47F43 100.08%)',
       },
       '&:focus': {
-        backgroundColor: '#A47F4380',
+        background: 'linear-gradient(100deg, #65421297 35.23%, #A47F43 100.08%)',
       },
       '&:active': {
-        backgroundColor: '#A47F4380',
+        background: 'linear-gradient(100deg, #65421297 35.23%, #A47F43 100.08%)',
       },
     },
   })
@@ -281,12 +289,12 @@ const Contact = () => {
             </Box>
           </form>
           {status.info.error && (
-            <Typography variant="body1" color="primary">
+            <Typography variant="body2" color="primary">
               Error: {status.info.msg}
             </Typography>
           )}
           {!status.info.error && status.info.msg && (
-            <Typography variant="body1" color="primary">
+            <Typography variant="body2" color="primary">
               {status.info.msg}
             </Typography>
           )}

@@ -17,12 +17,24 @@ const useStyles = makeStyles(() =>
         justifyContent: 'space-between',
       },
     },
+    contentWrapper: {
+      padding: "0px 40px 0 20px",
+      [theme.breakpoints.up('sm')]: {
+        padding: "0px 60px 0 40px",
+      },
+      [theme.breakpoints.up('md')]: {
+        padding: "0px 28px 0 28px",
+      },
+      [theme.breakpoints.up('lg')]: {
+        padding: "0px 60px 0 40px",
+      },  
+    },
     imageWrapper: {
       padding: '48px 90px',
       [theme.breakpoints.up('xs')]: {
-        padding: '0 0 0 20px',
+        padding: '0',
       },
-      [theme.breakpoints.up('sm')]: {
+      [theme.breakpoints.up('lg')]: {
         padding: '0 20px',
       },
     },
@@ -40,12 +52,25 @@ const useStyles = makeStyles(() =>
       cursor: 'pointer',
       transition: 'all .5s ease-in-out',
       width: 'fit-content',
+      marginTop: '20px',
       '&:hover': {
         '& p': {
           color: 'rgb(85,172,238)',
           fontWeight: '500',
           position: 'relative',
         },
+      },
+      [theme.breakpoints.up('xs')]: {
+        marginTop: '0',
+      },
+    },
+    image: {
+      width: '180px',
+      [theme.breakpoints.up('sm')]: {
+        width: '185px'
+      },
+      [theme.breakpoints.up('lg')]: {
+        width: '200px'
       },
     },
     circleOne: {
@@ -107,7 +132,7 @@ function Cover(props: CoverProps) {
       display="flex"
       className={classes.root}
     >
-      <Box display="flex" padding="0px 60px 0 40px">
+      <Box display="flex" className={classes.contentWrapper}>
         <Box
           display="flex"
           flexDirection="column"
@@ -130,7 +155,7 @@ function Cover(props: CoverProps) {
           display="flex"
           flexDirection="column"
           justifyContent="center"
-          width="200px"
+          className={classes.image}
         >
           <Box
             bgcolor="#bbb"

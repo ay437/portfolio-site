@@ -3,7 +3,6 @@ import Image from 'next/image';
 import createStyles from '@material-ui/core/styles/createStyles';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Box from '@material-ui/core/Box';
-import theme from '../../themeprovider/theme/index';
 
 export interface LinkItem {
   id: number;
@@ -21,16 +20,10 @@ const useStyles = makeStyles(() => createStyles({
     background: 'linear-gradient(100deg, #654212 35.23%, #A47F43 100.08%)',
   },
   topIcons: {
-    paddingTop: '80px',
-    [theme.breakpoints.up('sm')]: {
-      paddingTop: '60px',
-    },
+    paddingTop: '60px',
   },
   bottomIcons: {
-    paddingBottom: '80px',
-    [theme.breakpoints.up('sm')]: {
-      paddingBottom: '60px',
-    },
+    paddingBottom: '60px',
   },
   icon: {
     '&:hover': {

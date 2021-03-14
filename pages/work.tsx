@@ -7,6 +7,7 @@ import BlogCard from '../components/BlogCard/BlogCard';
 import Layout from '../components/Layouts/Layout/Layout';
 import { getSortedWorkData } from '../lib/work';
 import CloseButton from '../components/CloseButton/CloseButton';
+import theme from '../themeprovider/theme/index';
 
 const useStyles = makeStyles(() =>
   createStyles({
@@ -17,8 +18,11 @@ const useStyles = makeStyles(() =>
       margin: '50px 0 0 10px',
     },
     header: {
-      fontSize: '2.1875rem',
+      fontSize: '1.5rem',
       fontWeight: 500,
+      [theme.breakpoints.up('sm')]: {
+        fontSize: '2.1875rem',
+      },
     },
     workSection: {
       margin: '30px 0 0 0',

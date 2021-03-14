@@ -11,7 +11,10 @@ const useStyles = makeStyles(() =>
   createStyles({
     headerContainer: {
       display: 'flex',
-      padding: '24px 40px 16px',
+      padding: '24px 20px 16px',
+      [theme.breakpoints.up('xs')]: {
+        padding: '24px 40px 16px',
+      },
       [theme.breakpoints.up('sm')]: {
         padding: '32px 40px 20px',
       },

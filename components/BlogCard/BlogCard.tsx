@@ -31,20 +31,27 @@ const useStyles = makeStyles(() =>
       },
     },
     content: {
-      height: '150px',
+      height: '170px',
       [theme.breakpoints.up('xs')]: {
-        height: '210px',
+        height: '189px',
+      },
+      [theme.breakpoints.up('sm')]: {
+        height: '174px',
       },
       [theme.breakpoints.up('md')]: {
-        height: '190px',
+        height: '197px',
       },
-      [theme.breakpoints.up('lg')]: {
-        height: '210px',
+      [theme.breakpoints.up('xl')]: {
+        height: '146px',
       },
     },
     header: {
-      fontSize: '1.25rem',
+      fontSize: '1rem',
       marginBottom: '16px',
+      lineHeight: '1.5',
+      [theme.breakpoints.up('sm')]: {
+        fontSize: '1.1875rem',
+      },
     },
     blogIntro: {
       marginBottom: '16px',
@@ -83,7 +90,7 @@ function BlogCard({ id, title, date, image, intro }: BlogItem) {
           padding="20px"
           className={classes.content}
         >
-          <Typography variant="h3" color="primary" className={classes.header}>
+          <Typography variant="h2" color="primary" className={classes.header}>
             {title}
           </Typography>
           <Typography

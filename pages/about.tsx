@@ -4,7 +4,7 @@ import Layout from '../components/Layouts/Layout/Layout';
 
 function About() {
   return (
-    <Layout title="Content page">
+    <Layout title="About">
       <AboutLayout name="about me" />
     </Layout>
   );

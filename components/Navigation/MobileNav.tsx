@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
@@ -35,26 +36,24 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   listItemButton: {
+    '&.active': {
+      '& h3': {
+        color: '#1607ba',
+        fontWeight: 600,
+      },
+    },
     '&:hover': {
-      '& p': {
-        color: 'rgb(85,172,238)',
-        fontWeight: '900',
+      '& h3': {
+        color: '#1607ba',
+        fontWeight: 600,
         position: 'relative',
-        '&:after': {
-          content: '""',
-          position: 'absolute',
-          left: '0',
-          right: '0',
-          bottom: '-3px',
-          borderBottom: '2px solid rgb(85,172,238)',
-        },
       },
     },
   },
   listItemText: {
     fontWeight: 600,
     fontSize: '18px',
-    color: '#09006B',
+    color: '#000',
     margin: '10px 20px',
   },
   drawerPaper: {
@@ -73,6 +72,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function MobileNav() {
+  const router = useRouter();
   const categories = ['Home', 'About', 'Work', 'Blog', 'Contact'];
   const classes = useStyles();
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -84,8 +84,10 @@ function MobileNav() {
       <List>
         {categories.map((text) => (
           <Link href={`/${text.toLowerCase()}`}>
-            <ListItem button key={text} className={classes.listItemButton}>
-              <Typography variant="body1" className={classes.listItemText}>
+            <ListItem button key={text} className={`${classes.listItemButton} ${
+                    router.pathname === `/${text.toLowerCase()}` ? 'active' : ''
+                  }`}>
+              <Typography variant="h3" className={classes.listItemText}>
                 {text}
               </Typography>
             </ListItem>

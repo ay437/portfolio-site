@@ -10,7 +10,7 @@ import Links from '../components/Links/Links';
 const useStyles = makeStyles(() =>
   createStyles({
     linkPositionWrapper: {
-      margin: '25px auto 100px',
+      margin: '-47px auto 50px',
       [theme.breakpoints.up('sm')]: {
         margin: '-150px auto 100px',
       },
@@ -20,8 +20,12 @@ const useStyles = makeStyles(() =>
     },
     linkWrapper: {
       float: 'none',
-      width: '280px',
+      width: '220px',
+      height: '240px',
+      [theme.breakpoints.up('xs')]: {
+        width: '280px',
       height: '260px',
+      },
       [theme.breakpoints.up('sm')]: {
         float: 'right',
         width: '255px',

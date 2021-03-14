@@ -92,12 +92,10 @@ const useStyles = makeStyles(() =>
       [theme.breakpoints.up('xs')]: {
         flexDirection: 'row',
         height: 'auto',
-        marginRight: '40px',
       },
       [theme.breakpoints.up('md')]: {
         flexDirection: 'column',
         height: '50px',
-        marginRight: '0',
       },
     },
     navItemsThree: {
@@ -167,10 +165,10 @@ export default function BottomAppBar() {
       <div className={classes.root}>
         <Box className={classes.navWrapper}>
           <Box className={classes.navItemsOne}>
-            <Link href="/">
+            <Link href="/about">
               <Box className={classes.navLinks}>
                 <Typography variant="overline" color="secondary">
-                  HOME
+                  ABOUT
                 </Typography>
               </Box>
             </Link>
