@@ -72,8 +72,8 @@ const useStyles = makeStyles(() =>
       '&:hover': {
         '& h3': {
           color: '#1607ba',
-          fontWeight: 600,
           position: 'relative',
+          textStroke: '1px #1607ba'
         },
       },
     },
