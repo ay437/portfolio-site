@@ -3,7 +3,7 @@ import createStyles from '@material-ui/core/styles/createStyles';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import BlogCard from '../components/BlogCard/BlogCard';
+import WorkCard from '../components/WorkCard/WorkCard';
 import Layout from '../components/Layouts/Layout/Layout';
 import { getSortedWorkData } from '../lib/work';
 import CloseButton from '../components/CloseButton/CloseButton';
@@ -37,19 +37,24 @@ export default function Work({ allWorkData }) {
       <>
         <Box className={classes.root}>
           <Box className={classes.title}>
-            <CloseButton closeButton blogOrWork />
+            <CloseButton
+              closeButton
+              blogOrWork
+              isBlogContentPage={false}
+              isWorkContentPage={false}
+            />
             <Typography variant="h1" color="primary" className={classes.header}>
               Work
             </Typography>
           </Box>
           <Box
             display="flex"
-            flexDirection="row"
+            flexDirection="column"
             flexWrap="wrap"
             className={classes.workSection}
           >
             {allWorkData.map(({ id, title, intro, date, image }) => (
-              <BlogCard
+              <WorkCard
                 id={id}
                 title={title}
                 date={date}

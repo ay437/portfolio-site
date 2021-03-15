@@ -12,6 +12,8 @@ import theme from '../../themeprovider/theme/index';
 interface CloseButtonProps {
   closeButton: boolean;
   blogOrWork?: boolean;
+  isBlogContentPage?: boolean;
+  isWorkContentPage?: boolean;
 }
 
 const useStyles = makeStyles((blogOrWork) =>
@@ -42,25 +44,33 @@ const useStyles = makeStyles((blogOrWork) =>
 
 const CloseButton = (props: CloseButtonProps) => {
   const classes = useStyles();
-  const { closeButton } = props;
+  const { closeButton, isBlogContentPage, isWorkContentPage } = props;
   const router = useRouter();
-  const href = '/';
+  const hrefHome = '/';
+  const hrefBlog = '/blog';
+  const hrefWork = '/work';
   const handleClick = (e) => {
     e.preventDefault();
-    router.push(href);
+    if (isBlogContentPage) {
+      router.push(hrefBlog);
+    } else if (isWorkContentPage) {
+      router.push(hrefWork);
+    } else {
+      router.push(hrefHome);
+    }
   };
   return (
     <Box>
       <Box className={classes.close}>
         {closeButton && (
-          <Link href={href} onClick={handleClick}>
+          <Link href={hrefHome || hrefBlog || hrefWork} onClick={handleClick}>
             <ArrowBackIosIcon />
           </Link>
         )}
       </Box>
       <Box className={classes.closeMobile}>
         {closeButton && (
-          <Link href={href} onClick={handleClick}>
+          <Link href={hrefHome || hrefBlog || hrefWork} onClick={handleClick}>
             <KeyboardArrowLeftIcon />
           </Link>
         )}

@@ -9,6 +9,7 @@ import theme from '../../themeprovider/theme/index';
 import Layout from '../../components/Layouts/Layout/Layout';
 import Date from '../../components/Date/Date';
 import { getAllWorkIds, getWorkData } from '../../lib/work';
+import CloseButton from '../../components/CloseButton/CloseButton';
 
 export interface WorkItem {
   id: string;
@@ -29,10 +30,8 @@ const useStyles = makeStyles(() =>
       minHeight: '300px',
       width: 'auto',
       margin: '20px',
-      // margin: '50px 0 0 10px',
       [theme.breakpoints.up('md')]: {
         width: '80%',
-        // margin: '50px 0 0 110px',
       },
     },
     content: {
@@ -66,7 +65,7 @@ const useStyles = makeStyles(() =>
   })
 );
 
-export default function Blog({ workData }: WorkProps) {
+export default function Work({ workData }: WorkProps) {
   const classes = useStyles();
   const { id, title, date, contentHtml, image } = workData;
   return (
@@ -75,6 +74,12 @@ export default function Blog({ workData }: WorkProps) {
         <Head>
           <title>{title}</title>
         </Head>
+        <CloseButton
+          closeButton
+          blogOrWork
+          isWorkContentPage
+          isBlogContentPage={false}
+        />
         <Typography variant="h1" color="primary">
           {title}
         </Typography>

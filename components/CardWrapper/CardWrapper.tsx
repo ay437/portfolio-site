@@ -22,7 +22,12 @@ const CardWrapper: FunctionComponent<PageProps> = (props: PageProps) => {
   const { name, closeButton, blogOrWork } = props;
   return (
     <Box height="100%">
-      <CloseButton closeButton={closeButton} blogOrWork={blogOrWork} />
+      <CloseButton
+        closeButton={closeButton}
+        blogOrWork={blogOrWork}
+        isBlogContentPage={false}
+        isWorkContentPage={false}
+      />
       <Box>
         {() => {
           switch (name) {

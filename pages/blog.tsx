@@ -37,7 +37,12 @@ export default function Blog({ allBlogData }) {
       <>
         <Box className={classes.root}>
           <Box className={classes.title}>
-            <CloseButton closeButton blogOrWork />
+            <CloseButton
+              closeButton
+              blogOrWork
+              isBlogContentPage={false}
+              isWorkContentPage={false}
+            />
             <Typography variant="h1" color="primary" className={classes.header}>
               Blog
             </Typography>
