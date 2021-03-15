@@ -1,8 +1,8 @@
 ---
-title: 'React Hooks'
+title: 'Cancer Care Map'
 date: '2020-01-01'
-image: '/blog-example.jpg'
-intro: 'This is a whistle stop tour in how to optinise your site buy having content pre loaded for next time'
+image: '/cancer-care-map-logo.png'
+intro: 'A fully content editable Wordpress and ReactJS site with map search and form management api'
 ---
 
 Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.

@@ -1,8 +1,8 @@
 ---
-title: 'React Hooks'
+title: 'Premier Inn'
 date: '2020-01-01'
-image: '/blog-example.jpg'
-intro: 'This is a whistle stop tour in how to optinise your site buy having content pre loaded for next time'
+image: '/premier-inn-building.jpeg'
+intro: 'Helped to deliver a modern front end refresh to consumer facing site using Typescript and React'
 ---
 
 Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
