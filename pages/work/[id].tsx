@@ -26,12 +26,22 @@ export interface WorkProps {
 
 const useStyles = makeStyles(() =>
   createStyles({
+    wrapper: {
+      margin: '30px',
+    },
     root: {
       minHeight: '300px',
       width: 'auto',
-      margin: '20px',
       [theme.breakpoints.up('md')]: {
         width: '80%',
+      },
+    },
+    header: {
+      margin: '50px 0 30px 10px',
+      fontSize: '1.5rem',
+      fontWeight: 500,
+      [theme.breakpoints.up('sm')]: {
+        fontSize: '2.1875rem',
       },
     },
     content: {
@@ -80,42 +90,44 @@ export default function Work({ workData }: WorkProps) {
           isWorkContentPage
           isBlogContentPage={false}
         />
-        <Typography variant="h1" color="primary">
-          {title}
-        </Typography>
-        <br />
-        <Box
-          bgcolor="#fff"
-          boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
-          borderRadius="16px"
-          height="100%"
-          padding="20px"
-          display="flex"
-          className={classes.root}
-        >
-          <Box flexShrink="0" className={classes.content}>
-            <Typography variant="body1" color="primary">
-              <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
-              <br />
-              <Date dateString={date} />
-            </Typography>
+        <Box className={classes.wrapper}>
+          <Typography variant="h1" color="primary" className={classes.header}>
+            {title}
+          </Typography>
+          <br />
+          <Box
+            bgcolor="#fff"
+            boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
+            borderRadius="16px"
+            height="100%"
+            padding="20px"
+            display="flex"
+            className={classes.root}
+          >
+            <Box flexShrink="0" className={classes.content}>
+              <Typography variant="body1" color="primary">
+                <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+                <br />
+                <Date dateString={date} />
+              </Typography>
+            </Box>
+            <Box>
+              <img
+                src={image}
+                alt="headshot"
+                width="300px"
+                className={classes.image}
+              />
+            </Box>
           </Box>
-          <Box>
+          <Box display="flex" justifyContent="flex-end">
             <img
               src={image}
-              alt="headshot"
-              width="300px"
-              className={classes.image}
+              alt={title}
+              width="250px"
+              className={classes.imageMobile}
             />
           </Box>
-        </Box>
-        <Box display="flex" justifyContent="flex-end">
-          <img
-            src={image}
-            alt={title}
-            width="250px"
-            className={classes.imageMobile}
-          />
         </Box>
       </>
     </Layout>
