@@ -84,9 +84,13 @@ function MobileNav() {
       <List>
         {categories.map((text) => (
           <Link href={`/${text.toLowerCase()}`}>
-            <ListItem button key={text} className={`${classes.listItemButton} ${
-                    router.pathname === `/${text.toLowerCase()}` ? 'active' : ''
-                  }`}>
+            <ListItem
+              button
+              key={text}
+              className={`${classes.listItemButton} ${
+                router.pathname === `/${text.toLowerCase()}` ? 'active' : ''
+              }`}
+            >
               <Typography variant="h3" className={classes.listItemText}>
                 {text}
               </Typography>

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import createStyles from '@material-ui/core/styles/createStyles';
 import makeStyles from '@material-ui/core/styles/makeStyles';
@@ -6,7 +7,7 @@ import Box from '@material-ui/core/Box';
 import WorkCard from '../components/WorkCard/WorkCard';
 import Layout from '../components/Layouts/Layout/Layout';
 import { getSortedWorkData } from '../lib/work';
-import CloseButton from '../components/CloseButton/CloseButton';
+import BackButton from '../components/BackButton/BackButton';
 import theme from '../themeprovider/theme/index';
 
 const useStyles = makeStyles(() =>
@@ -27,8 +28,7 @@ const useStyles = makeStyles(() =>
     workSection: {
       margin: '30px 0 0 0',
     },
-  })
-);
+  }));
 
 export default function Work({ allWorkData }) {
   const classes = useStyles();
@@ -37,8 +37,8 @@ export default function Work({ allWorkData }) {
       <>
         <Box className={classes.root}>
           <Box className={classes.title}>
-            <CloseButton
-              closeButton
+            <BackButton
+              backButton
               blogOrWork
               isBlogContentPage={false}
               isWorkContentPage={false}
@@ -53,7 +53,9 @@ export default function Work({ allWorkData }) {
             flexWrap="wrap"
             className={classes.workSection}
           >
-            {allWorkData.map(({ id, title, intro, date, image }) => (
+            {allWorkData.map(({
+              id, title, intro, date, image,
+            }) => (
               <WorkCard
                 id={id}
                 title={title}

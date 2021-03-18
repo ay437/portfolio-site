@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import createStyles from '@material-ui/core/styles/createStyles';
 import makeStyles from '@material-ui/core/styles/makeStyles';
@@ -6,7 +7,7 @@ import Box from '@material-ui/core/Box';
 import BlogCard from '../components/BlogCard/BlogCard';
 import Layout from '../components/Layouts/Layout/Layout';
 import { getSortedBlogData } from '../lib/blog';
-import CloseButton from '../components/CloseButton/CloseButton';
+import BackButton from '../components/BackButton/BackButton';
 import theme from '../themeprovider/theme/index';
 
 const useStyles = makeStyles(() =>
@@ -27,8 +28,7 @@ const useStyles = makeStyles(() =>
     blogSection: {
       margin: '30px 0 0 0',
     },
-  })
-);
+  }));
 
 export default function Blog({ allBlogData }) {
   const classes = useStyles();
@@ -37,8 +37,8 @@ export default function Blog({ allBlogData }) {
       <>
         <Box className={classes.root}>
           <Box className={classes.title}>
-            <CloseButton
-              closeButton
+            <BackButton
+              backButton
               blogOrWork
               isBlogContentPage={false}
               isWorkContentPage={false}
@@ -53,7 +53,9 @@ export default function Blog({ allBlogData }) {
             flexWrap="wrap"
             className={classes.blogSection}
           >
-            {allBlogData.map(({ id, title, intro, date, image }) => (
+            {allBlogData.map(({
+              id, title, intro, date, image,
+            }) => (
               <BlogCard
                 id={id}
                 title={title}

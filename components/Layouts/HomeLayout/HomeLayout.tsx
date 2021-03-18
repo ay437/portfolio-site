@@ -67,20 +67,21 @@ export default function Layout(props: AltLayout) {
             >
               <CardWrapper
                 name={sectionData.name}
-                closeButton={false}
+                backButton={false}
                 blogOrWork={false}
+                isBlogContentPage={false}
+                isWorkContentPage={false}
               />
             </div>
           ) : (
             <div key={sectionData.id} data-aos={sectionData.dataAos}>
               <CardWrapper
                 name={sectionData.name}
-                closeButton={false}
+                backButton={false}
                 blogOrWork={false}
               />
             </div>
-          )
-        )}
+          ))}
       </ResponsiveGridLayout>
     </div>
   );

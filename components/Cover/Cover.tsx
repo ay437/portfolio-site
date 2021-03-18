@@ -18,16 +18,19 @@ const useStyles = makeStyles(() =>
       },
     },
     contentWrapper: {
-      padding: "0px 40px 0 20px",
+      padding: '0px 40px 0 20px',
+      [theme.breakpoints.up('xs')]: {
+        padding: '0px 40px',
+      },
       [theme.breakpoints.up('sm')]: {
-        padding: "0px 60px 0 40px",
+        padding: '0px 60px 0 40px',
       },
       [theme.breakpoints.up('md')]: {
-        padding: "0px 28px 0 28px",
+        padding: '0px 28px 0 28px',
       },
       [theme.breakpoints.up('lg')]: {
-        padding: "0px 60px 0 40px",
-      },  
+        padding: '0px 60px 0 40px',
+      },
     },
     imageWrapper: {
       padding: '48px 90px',
@@ -67,10 +70,10 @@ const useStyles = makeStyles(() =>
     image: {
       width: '180px',
       [theme.breakpoints.up('sm')]: {
-        width: '185px'
+        width: '185px',
       },
       [theme.breakpoints.up('lg')]: {
-        width: '200px'
+        width: '200px',
       },
     },
     circleOne: {
@@ -113,8 +116,7 @@ const useStyles = makeStyles(() =>
         marginLeft: '40px',
       },
     },
-  })
-);
+  }));
 
 interface CoverProps {
   title: string;

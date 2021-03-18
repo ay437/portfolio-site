@@ -9,7 +9,7 @@ import theme from '../../themeprovider/theme/index';
 import Layout from '../../components/Layouts/Layout/Layout';
 import Date from '../../components/Date/Date';
 import { getAllWorkIds, getWorkData } from '../../lib/work';
-import CloseButton from '../../components/CloseButton/CloseButton';
+import BackButton from '../../components/BackButton/BackButton';
 
 export interface WorkItem {
   id: string;
@@ -72,20 +72,21 @@ const useStyles = makeStyles(() =>
         display: 'none',
       },
     },
-  })
-);
+  }));
 
 export default function Work({ workData }: WorkProps) {
   const classes = useStyles();
-  const { id, title, date, contentHtml, image } = workData;
+  const {
+    id, title, date, contentHtml, image,
+  } = workData;
   return (
     <Layout title={id}>
       <>
         <Head>
           <title>{title}</title>
         </Head>
-        <CloseButton
-          closeButton
+        <BackButton
+          backButton
           blogOrWork
           isWorkContentPage
           isBlogContentPage={false}

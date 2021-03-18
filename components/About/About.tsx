@@ -66,7 +66,7 @@ const useStyles = makeStyles(() =>
       marginTop: '50px',
       display: 'none',
       [theme.breakpoints.up('sm')]: {
-        marginTop: '70px'
+        marginTop: '70px',
       },
       [theme.breakpoints.up('md')]: {
         display: 'flex',
@@ -74,12 +74,12 @@ const useStyles = makeStyles(() =>
     },
     services: {
       flexDirection: 'column',
-      marginTop:"50px",
-      marginBottom:"50px",
+      marginTop: '50px',
+      marginBottom: '50px',
       [theme.breakpoints.up('sm')]: {
         flexDirection: 'row',
-        marginTop:"70px",
-        marginBottom:"70px",
+        marginTop: '70px',
+        marginBottom: '70px',
       },
     },
     servicesBreaks: {
@@ -90,8 +90,7 @@ const useStyles = makeStyles(() =>
         transform: 'none',
       },
     },
-  })
-);
+  }));
 
 function About() {
   const classes = useStyles();

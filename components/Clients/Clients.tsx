@@ -10,7 +10,7 @@ const useStyles = makeStyles(() =>
     header: {
       padding: '24px 20px 16px',
       [theme.breakpoints.up('xs')]: {
-        padding: '32px',
+        padding: '32px 40px',
       },
       [theme.breakpoints.up('sm')]: {
         padding: '32px 40px',
@@ -44,8 +44,7 @@ const useStyles = makeStyles(() =>
         height: '40px',
       },
     },
-  })
-);
+  }));
 
 function Clients() {
   const classes = useStyles();

@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     header: {
       fontWeight: 500,
-      marginBottom: '8px'
+      marginBottom: '8px',
     },
     textArea: {
       fontSize: '1rem',
@@ -143,8 +143,7 @@ const useStyles = makeStyles((theme: Theme) =>
         background: 'linear-gradient(100deg, #65421297 35.23%, #A47F43 100.08%)',
       },
     },
-  })
-);
+  }));
 
 const Contact = () => {
   const classes = useStyles();

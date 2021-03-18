@@ -58,8 +58,7 @@ const useStyles = makeStyles(() =>
         display: 'block',
       },
     },
-  })
-);
+  }));
 
 function Testimonials() {
   const classes = useStyles();

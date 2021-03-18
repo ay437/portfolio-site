@@ -155,8 +155,7 @@ const useStyles = makeStyles(() =>
     buttonText: {
       textTransform: 'none',
     },
-  })
-);
+  }));
 
 export default function BottomAppBar() {
   const classes = useStyles();

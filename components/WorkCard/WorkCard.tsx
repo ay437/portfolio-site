@@ -60,8 +60,7 @@ const useStyles = makeStyles(() =>
         height: '150px',
       },
     },
-  })
-);
+  }));
 
 export interface WorkItem {
   id: string;
@@ -71,7 +70,9 @@ export interface WorkItem {
   intro: string;
 }
 
-function WorkCard({ id, title, date, image, intro }: WorkItem) {
+function WorkCard({
+  id, title, date, image, intro,
+}: WorkItem) {
   const classes = useStyles();
   return (
     <Link href={`/work/${id}`}>

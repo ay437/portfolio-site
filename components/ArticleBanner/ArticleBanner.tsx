@@ -42,8 +42,7 @@ const useStyles = makeStyles(() =>
     articleHeading: {
       width: '240px',
     },
-  })
-);
+  }));
 
 function ArticleBanner() {
   const classes = useStyles();

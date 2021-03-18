@@ -26,8 +26,7 @@ const useStyles = makeStyles(() =>
         margin: '0 auto',
       },
     },
-  })
-);
+  }));
 
 export default function Layout(props: Children) {
   const classes = useStyles();

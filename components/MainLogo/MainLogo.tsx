@@ -2,7 +2,7 @@
 import React from 'react';
 import Box from '@material-ui/core/Box';
 import Image from 'next/image';
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 
 // const Sketch = dynamic(
 //     () => import("react-p5"),
@@ -12,12 +12,12 @@ import dynamic from 'next/dynamic';
 // )
 
 function MainLogo() {
-//   let ballyX;
-//   let ballyXDirec;
-//   let ballyY;
-//   let ballyYDirec;
-//   let Color;
-//   let random255;
+  //   let ballyX;
+  //   let ballyXDirec;
+  //   let ballyY;
+  //   let ballyYDirec;
+  //   let Color;
+  //   let random255;
 
   //   const setup = (p5, canvasParentRef) => {
   //     p5.createCanvas(300, 300).parent(canvasParentRef);
@@ -69,12 +69,7 @@ function MainLogo() {
       alignItems="center"
     >
       {/* <Sketch setup={setup} draw={draw} /> */}
-      <Image
-        src="/main-logo.svg"
-        alt="logo-white"
-        width={130}
-        height={161}
-      />
+      <Image src="/main-logo.svg" alt="logo-white" width={130} height={161} />
     </Box>
   );
 }

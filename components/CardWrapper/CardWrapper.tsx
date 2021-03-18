@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import Box from '@material-ui/core/Box';
-import CloseButton from '../CloseButton/CloseButton';
+import BackButton from '../BackButton/BackButton';
 import Cover from '../Cover/Cover';
 import Intro from '../Intro/Intro';
 import Links from '../Links/Links';
@@ -14,16 +14,16 @@ import Contact from '../Contact/Contact';
 
 interface PageProps {
   name: string;
-  closeButton: boolean;
+  backButton: boolean;
   blogOrWork: boolean;
 }
 
 const CardWrapper: FunctionComponent<PageProps> = (props: PageProps) => {
-  const { name, closeButton, blogOrWork } = props;
+  const { name, backButton, blogOrWork } = props;
   return (
     <Box height="100%">
-      <CloseButton
-        closeButton={closeButton}
+      <BackButton
+        backButton={backButton}
         blogOrWork={blogOrWork}
         isBlogContentPage={false}
         isWorkContentPage={false}

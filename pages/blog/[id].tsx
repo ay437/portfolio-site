@@ -9,7 +9,7 @@ import theme from '../../themeprovider/theme/index';
 import Layout from '../../components/Layouts/Layout/Layout';
 import Date from '../../components/Date/Date';
 import { getAllBlogIds, getBlogData } from '../../lib/blog';
-import CloseButton from '../../components/CloseButton/CloseButton';
+import BackButton from '../../components/BackButton/BackButton';
 
 export interface BlogItem {
   id: string;
@@ -72,20 +72,21 @@ const useStyles = makeStyles(() =>
         display: 'none',
       },
     },
-  })
-);
+  }));
 
 export default function Blog({ blogData }: BlogProps) {
   const classes = useStyles();
-  const { id, title, date, contentHtml, image } = blogData;
+  const {
+    id, title, date, contentHtml, image,
+  } = blogData;
   return (
     <Layout title={id}>
       <>
         <Head>
           <title>{title}</title>
         </Head>
-        <CloseButton
-          closeButton
+        <BackButton
+          backButton
           blogOrWork
           isWorkContentPage={false}
           isBlogContentPage

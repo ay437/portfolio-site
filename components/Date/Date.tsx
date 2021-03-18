@@ -1,12 +1,14 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { parseISO, format } from 'date-fns';
 
 export default function Date({ dateString }) {
-  const date = parseISO(dateString);
+  const fullDate: string = dateString;
+  const date = parseISO(fullDate);
   return (
     <Typography variant="body2" color="primary">
-      <time dateTime={dateString}>{format(date, 'LLLL d, yyyy')}</time>
+      <time dateTime={fullDate}>{format(date, 'LLLL d, yyyy')}</time>
     </Typography>
   );
 }

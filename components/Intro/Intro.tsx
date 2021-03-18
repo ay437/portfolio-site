@@ -36,9 +36,9 @@ const useStyles = makeStyles(() =>
       },
     },
     introCopy: {
-      padding:"24px 0",
+      padding: '24px 0',
       [theme.breakpoints.up('sm')]: {
-        padding:"30px 0",
+        padding: '30px 0',
       },
     },
     waveWrapper: {
@@ -55,8 +55,7 @@ const useStyles = makeStyles(() =>
         fontSize: '50px',
       },
     },
-  })
-);
+  }));
 
 function Intro(props: IntroProps) {
   const { title1, title2, wave } = props;

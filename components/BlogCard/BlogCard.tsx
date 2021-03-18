@@ -65,8 +65,7 @@ const useStyles = makeStyles(() =>
         height: '150px',
       },
     },
-  })
-);
+  }));
 
 export interface BlogItem {
   id: string;
@@ -76,7 +75,9 @@ export interface BlogItem {
   intro: string;
 }
 
-function BlogCard({ id, title, date, image, intro }: BlogItem) {
+function BlogCard({
+  id, title, date, image, intro,
+}: BlogItem) {
   const classes = useStyles();
   return (
     <Link href={`/blog/${id}`}>

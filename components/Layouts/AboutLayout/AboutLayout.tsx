@@ -24,7 +24,7 @@ export default function AboutLayout(props: Name) {
 
   return (
     <Box data-aos="fade-in" margin="30px" height="100%">
-      <CardWrapper name={name} closeButton blogOrWork={false} />
+      <CardWrapper name={name} backButton blogOrWork={false} />
     </Box>
   );
 }

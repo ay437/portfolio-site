@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import Image from 'next/image';
 import createStyles from '@material-ui/core/styles/createStyles';
@@ -46,8 +47,7 @@ const useStyles = makeStyles(() =>
         display: 'none',
       },
     },
-  })
-);
+  }));
 
 function Skills() {
   const classes = useStyles();

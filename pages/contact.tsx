@@ -24,7 +24,7 @@ const useStyles = makeStyles(() =>
       height: '240px',
       [theme.breakpoints.up('xs')]: {
         width: '280px',
-      height: '260px',
+        height: '260px',
       },
       [theme.breakpoints.up('sm')]: {
         float: 'right',
@@ -38,8 +38,7 @@ const useStyles = makeStyles(() =>
         margin: '0px -27px 0px 40px',
       },
     },
-  })
-);
+  }));
 
 function Contact() {
   const classes = useStyles();

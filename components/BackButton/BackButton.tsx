@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-prop-types */
 /* eslint-disable react/require-default-props */
 import React from 'react';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
@@ -9,8 +10,8 @@ import Link from '@material-ui/core/Link';
 import { useRouter } from 'next/router';
 import theme from '../../themeprovider/theme/index';
 
-interface CloseButtonProps {
-  closeButton: boolean;
+interface BackButtonProps {
+  backButton: boolean;
   blogOrWork?: boolean;
   isBlogContentPage?: boolean;
   isWorkContentPage?: boolean;
@@ -18,7 +19,7 @@ interface CloseButtonProps {
 
 const useStyles = makeStyles((blogOrWork) =>
   createStyles({
-    close: {
+    back: {
       position: blogOrWork ? 'relative' : 'absolute',
       left: blogOrWork ? '-40px' : '-30px',
       display: 'none',
@@ -30,7 +31,7 @@ const useStyles = makeStyles((blogOrWork) =>
         top: '400px',
       },
     },
-    closeMobile: {
+    backMobile: {
       position: blogOrWork ? 'relative' : 'absolute',
       left: '-25px',
       display: 'block',
@@ -39,12 +40,17 @@ const useStyles = makeStyles((blogOrWork) =>
         display: 'none',
       },
     },
-  })
-);
+    backIcon: {
+      color: '#2A3036',
+      '&:hover': {
+        color: '#1607ba',
+      },
+    },
+  }));
 
-const CloseButton = (props: CloseButtonProps) => {
+const BackButton = (props: BackButtonProps) => {
   const classes = useStyles();
-  const { closeButton, isBlogContentPage, isWorkContentPage } = props;
+  const { backButton, isBlogContentPage, isWorkContentPage } = props;
   const router = useRouter();
   const hrefHome = '/';
   const hrefBlog = '/blog';
@@ -61,17 +67,17 @@ const CloseButton = (props: CloseButtonProps) => {
   };
   return (
     <Box>
-      <Box className={classes.close}>
-        {closeButton && (
+      <Box className={classes.back}>
+        {backButton && (
           <Link href={hrefHome || hrefBlog || hrefWork} onClick={handleClick}>
-            <ArrowBackIosIcon />
+            <ArrowBackIosIcon className={classes.backIcon} />
           </Link>
         )}
       </Box>
-      <Box className={classes.closeMobile}>
-        {closeButton && (
+      <Box className={classes.backMobile}>
+        {backButton && (
           <Link href={hrefHome || hrefBlog || hrefWork} onClick={handleClick}>
-            <KeyboardArrowLeftIcon />
+            <KeyboardArrowLeftIcon className={classes.backIcon} />
           </Link>
         )}
       </Box>
@@ -79,4 +85,4 @@ const CloseButton = (props: CloseButtonProps) => {
   );
 };
 
-export default CloseButton;
+export default BackButton;

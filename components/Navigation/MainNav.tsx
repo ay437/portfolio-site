@@ -73,7 +73,7 @@ const useStyles = makeStyles(() =>
         '& h3': {
           color: '#1607ba',
           position: 'relative',
-          textStroke: '1px #1607ba'
+          textStroke: '1px #1607ba',
         },
       },
     },
@@ -86,8 +86,7 @@ const useStyles = makeStyles(() =>
     buttonText: {
       textTransform: 'none',
     },
-  })
-);
+  }));
 
 function MainNav() {
   const classes = useStyles();
