@@ -69,8 +69,6 @@ export default function Layout(props: AltLayout) {
                 name={sectionData.name}
                 backButton={false}
                 blogOrWork={false}
-                isBlogContentPage={false}
-                isWorkContentPage={false}
               />
             </div>
           ) : (
@@ -81,7 +79,8 @@ export default function Layout(props: AltLayout) {
                 blogOrWork={false}
               />
             </div>
-          ))}
+          )
+        )}
       </ResponsiveGridLayout>
     </div>
   );
