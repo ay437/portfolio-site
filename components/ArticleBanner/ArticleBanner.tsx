@@ -42,48 +42,49 @@ const useStyles = makeStyles(() =>
     articleHeading: {
       width: '240px',
     },
-  }));
+  })
+);
 
 function ArticleBanner() {
   const classes = useStyles();
   return (
-    <Link href="/blog">
-      <Box
-        borderRadius="16px"
-        boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
-        height="100%"
+    // <Link href="/blog">
+    <Box
+      borderRadius="16px"
+      boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
+      height="100%"
+      display="flex"
+      justifyContent="space-evenly"
+      flexWrap="wrap"
+      alignItems="center"
+      width="100%"
+      overflow="auto"
+      className={classes.articleBannerWrapper}
+    >
+      {/* <Box
+        className={classes.articleImage}
         display="flex"
-        justifyContent="space-evenly"
-        flexWrap="wrap"
-        alignItems="center"
-        width="100%"
-        overflow="auto"
-        className={classes.articleBannerWrapper}
+        flexDirection="column"
+        justifyContent="flex-end"
+        alignItems="flex-start"
       >
-        <Box
-          className={classes.articleImage}
-          display="flex"
-          flexDirection="column"
-          justifyContent="flex-end"
-          alignItems="flex-start"
-        >
-          <Box className={classes.articleWrapper}>
-            <Button className={classes.articleButton}>
-              <Typography variant="button" color="primary">
-                ARTICLE
-              </Typography>
-            </Button>
-            <Typography
-              variant="h1"
-              color="secondary"
-              className={classes.articleHeading}
-            >
-              The future of creative coding
+        <Box className={classes.articleWrapper}>
+          <Button className={classes.articleButton}>
+            <Typography variant="button" color="primary">
+              ARTICLE
             </Typography>
-          </Box>
+          </Button>
+          <Typography
+            variant="h1"
+            color="secondary"
+            className={classes.articleHeading}
+          >
+            The future of creative coding
+          </Typography>
         </Box>
-      </Box>
-    </Link>
+      </Box> */}
+    </Box>
+    // </Link>
   );
 }
 

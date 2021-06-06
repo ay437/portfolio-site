@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import createStyles from '@material-ui/core/styles/createStyles';
 import makeStyles from '@material-ui/core/styles/makeStyles';
@@ -62,6 +63,9 @@ const useStyles = makeStyles(() =>
         marginTop: '50px',
       },
     },
+    aboutMainCopy: {
+      lineHeight: '2',
+    },
     halfVerticalLine: {
       marginTop: '50px',
       display: 'none',
@@ -90,7 +94,8 @@ const useStyles = makeStyles(() =>
         transform: 'none',
       },
     },
-  }));
+  })
+);
 
 function About() {
   const classes = useStyles();
@@ -117,34 +122,30 @@ function About() {
           </Box>
           <hr />
           <Box marginTop="40px">
-            <Typography variant="body1" color="primary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. At
-              imperdiet dui accumsan sit amet. Rhoncus aenean vel elit
-              scelerisque mauris pellentesque pulvinar pellentesque habitant.
-              Convallis convallis tellus id interdum. Elementum facilisis leo
-              vel fringilla est ullamcorper. Semper quis lectus nulla at. Orci
-              dapibus ultrices in iaculis. Lectus magna fringilla urna porttitor
-              rhoncus dolor. Vel eros donec ac odio tempor orci dapibus ultrices
-              in. Nunc congue nisi vitae suscipit tellus mauris. Interdum velit
-              euismod in pellentesque. Lacus laoreet non curabitur gravida arcu.
-              Adipiscing elit ut aliquam purus sit amet luctus.
-              <br />
-              <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. At
-              imperdiet dui accumsan sit amet. Rhoncus aenean vel elit
-              scelerisque mauris pellentesque pulvinar pellentesque habitant.
-              Convallis convallis tellus id interdum. Elementum facilisis leo
-              vel fringilla est ullamcorper. Semper quis lectus nulla at. Orci
-              dapibus ultrices in iaculis. Lectus magna fringilla urna porttitor
-              rhoncus dolor. Vel eros donec ac odio tempor orci dapibus ultrices
-              in.
-            </Typography>
-            <Box
-              marginLeft="70px"
-              className={classes.halfVerticalLine}
+            <Typography
+              variant="body1"
+              color="primary"
+              className={classes.aboutMainCopy}
             >
+              I have experience across Javascript, React, Typescript, NodeJS,
+              Gatsby, Contentful &amp; GraphQL, as well as having skills across
+              web design &amp; UX/UI. I strive to promote best practices in
+              testing &amp; code quality, pushing for stronger agile practices.
+              <br />
+              <br />I aim for responsive, clean and innovative web development
+              which look to elevate user experience and functionality. I have
+              benefitted from having experience across a variety of sectors
+              within development, hence I appreciate key end user stories &amp;
+              functionalities that make products successful, useful &amp; rich.
+              <br />
+              <br />
+              Personal part, Personal part,Personal part,Personal part,Personal
+              part,Personal part,Personal part,Personal part,Personal
+              part,Personal part,Personal part,Personal part,Personal part,
+              part,Personal part,Personal part,Personal part,Personal part,
+              part,Personal part,Personal part,Personal part,Personal part,
+            </Typography>
+            <Box marginLeft="70px" className={classes.halfVerticalLine}>
               <img
                 src="/half-vertical-line.svg"
                 alt="veritical-break"
@@ -172,7 +173,7 @@ function About() {
               color="primary"
               className={classes.subHeader}
             >
-              LOREM IPSUM
+              Web Development
             </Typography>
             <br />
             <Typography variant="body1" color="primary">
@@ -194,7 +195,7 @@ function About() {
               color="primary"
               className={classes.subHeader}
             >
-              LOREM IPSUM
+              UX/UI Design
             </Typography>
             <br />
             <Typography variant="body1" color="primary">
@@ -216,7 +217,7 @@ function About() {
               color="primary"
               className={classes.subHeader}
             >
-              LOREM IPSUM
+              Web Consultancy
             </Typography>
             <br />
             <Typography variant="body1" color="primary">

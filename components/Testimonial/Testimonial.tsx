@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import createStyles from '@material-ui/core/styles/createStyles';
@@ -36,6 +37,7 @@ const useStyles = makeStyles(() =>
     },
     shortText: {
       display: 'block',
+      fontStyle: 'italic',
       [theme.breakpoints.up('xs')]: {
         display: 'none',
       },
@@ -48,6 +50,7 @@ const useStyles = makeStyles(() =>
     },
     longText: {
       display: 'none',
+      fontStyle: 'italic',
       [theme.breakpoints.up('xs')]: {
         display: 'block',
       },
@@ -58,7 +61,8 @@ const useStyles = makeStyles(() =>
         display: 'block',
       },
     },
-  }));
+  })
+);
 
 function Testimonials() {
   const classes = useStyles();
@@ -98,19 +102,19 @@ function Testimonials() {
               color="primary"
               className={classes.shortText}
             >
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit...“
+              “A strong frontend developer with a broad depth of knowledge...“
             </Typography>
             <Typography
               variant="body2"
               color="primary"
               className={classes.longText}
             >
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore.“
+              “A strong frontend developer with a broad depth of knowledge of
+              tech skills using various frameworks.“
             </Typography>
             <br />
             <Typography variant="caption" color="primary">
-              Person’s name
+              Rufus Honor, Tech Lead at Premier Inn
             </Typography>
           </Box>
           <Box>
@@ -119,19 +123,19 @@ function Testimonials() {
               color="primary"
               className={classes.shortText}
             >
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit...“
+              “Arjun is approachable, collaborative...“
             </Typography>
             <Typography
               variant="body2"
               color="primary"
               className={classes.longText}
             >
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore.“
+              “Arjun is approachable, collaborative with great communication,
+              offering alternatives to designs.“
             </Typography>
             <br />
             <Typography variant="caption" color="primary">
-              Person’s name
+              Sophie Mitchell, UX Lead at Premier Inn
             </Typography>
           </Box>
           <Box>
@@ -140,19 +144,19 @@ function Testimonials() {
               color="primary"
               className={classes.shortText}
             >
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit...“
+              “Arjun worked well with stakeholders...“
             </Typography>
             <Typography
               variant="body2"
               color="primary"
               className={classes.longText}
             >
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore.“
+              “Arjun worked well with some stakeholders who can be really
+              challenging &amp; he was patient.“
             </Typography>
             <br />
             <Typography variant="caption" color="primary">
-              Person’s name
+              Richard Smart, Delivery Manager
             </Typography>
           </Box>
           <Box>
@@ -161,19 +165,19 @@ function Testimonials() {
               color="primary"
               className={classes.shortText}
             >
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit...“
+              “He's quick on his feet and great at helping us complete...“
             </Typography>
             <Typography
               variant="body2"
               color="primary"
               className={classes.longText}
             >
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore.“
+              “He's quick on his feet and great at helping us complete tasks on
+              time.“
             </Typography>
             <br />
             <Typography variant="caption" color="primary">
-              Person’s name
+              Brian Li, Senior Software Engineer
             </Typography>
           </Box>
           <Box>
@@ -182,19 +186,19 @@ function Testimonials() {
               color="primary"
               className={classes.shortText}
             >
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit...“
+              “He came on board and was able to quickly get a grasp...“
             </Typography>
             <Typography
               variant="body2"
               color="primary"
               className={classes.longText}
             >
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore.“
+              “He came on board and was able to quickly get a grasp on the tech
+              and ways of working.“
             </Typography>
             <br />
             <Typography variant="caption" color="primary">
-              Person’s name
+              Niru Sharma, Product Analyst at AND Digital
             </Typography>
           </Box>
           <Box>
@@ -203,19 +207,19 @@ function Testimonials() {
               color="primary"
               className={classes.shortText}
             >
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit...“
+              “Every item he's has picked up was delivered to a high...“
             </Typography>
             <Typography
               variant="body2"
               color="primary"
               className={classes.longText}
             >
-              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore.“
+              “Every item he's has picked up was delivered to a high standard,
+              often beyond what’s been asked.“
             </Typography>
             <br />
             <Typography variant="caption" color="primary">
-              Person’s name
+              Annette Pearcy, Lead UI Designer
             </Typography>
           </Box>
         </Slider>

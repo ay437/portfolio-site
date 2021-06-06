@@ -1,12 +1,13 @@
+// Move back to main directory in /pages when ready to update page
 /* eslint-disable react/prop-types */
 import React from 'react';
 import createStyles from '@material-ui/core/styles/createStyles';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import BlogCard from '../components/BlogCard/BlogCard';
+import WorkCard from '../components/WorkCard/WorkCard';
 import Layout from '../components/Layouts/Layout/Layout';
-import { getSortedBlogData } from '../lib/blog';
+import { getSortedWorkData } from '../lib/work';
 import BackButton from '../components/BackButton/BackButton';
 import theme from '../themeprovider/theme/index';
 
@@ -15,6 +16,9 @@ const useStyles = makeStyles(() =>
     root: {
       margin: '30px',
     },
+    title: {
+      margin: '50px 0 0 10px',
+    },
     header: {
       fontSize: '1.5rem',
       fontWeight: 500,
@@ -22,18 +26,16 @@ const useStyles = makeStyles(() =>
         fontSize: '2.1875rem',
       },
     },
-    title: {
-      margin: '50px 0 0 10px',
-    },
-    blogSection: {
+    workSection: {
       margin: '30px 0 0 0',
     },
-  }));
+  })
+);
 
-export default function Blog({ allBlogData }) {
+export default function Work({ allWorkData }) {
   const classes = useStyles();
   return (
-    <Layout title="Blog page">
+    <Layout title="Work page">
       <>
         <Box className={classes.root}>
           <Box className={classes.title}>
@@ -44,19 +46,17 @@ export default function Blog({ allBlogData }) {
               isWorkContentPage={false}
             />
             <Typography variant="h1" color="primary" className={classes.header}>
-              Blog
+              Work
             </Typography>
           </Box>
           <Box
             display="flex"
-            flexDirection="row"
+            flexDirection="column"
             flexWrap="wrap"
-            className={classes.blogSection}
+            className={classes.workSection}
           >
-            {allBlogData.map(({
-              id, title, intro, date, image,
-            }) => (
-              <BlogCard
+            {allWorkData.map(({ id, title, intro, date, image }) => (
+              <WorkCard
                 id={id}
                 title={title}
                 date={date}
@@ -72,10 +72,10 @@ export default function Blog({ allBlogData }) {
 }
 
 export async function getStaticProps() {
-  const allBlogData = getSortedBlogData();
+  const allWorkData = getSortedWorkData();
   return {
     props: {
-      allBlogData,
+      allWorkData,
     },
   };
 }

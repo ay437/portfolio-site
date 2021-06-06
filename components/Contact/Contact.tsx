@@ -134,16 +134,20 @@ const useStyles = makeStyles((theme: Theme) =>
         fontSize: '1.125rem',
       },
       '&:hover': {
-        background: 'linear-gradient(100deg, #65421297 35.23%, #A47F43 100.08%)',
+        background:
+          'linear-gradient(100deg, #65421297 35.23%, #A47F43 100.08%)',
       },
       '&:focus': {
-        background: 'linear-gradient(100deg, #65421297 35.23%, #A47F43 100.08%)',
+        background:
+          'linear-gradient(100deg, #65421297 35.23%, #A47F43 100.08%)',
       },
       '&:active': {
-        background: 'linear-gradient(100deg, #65421297 35.23%, #A47F43 100.08%)',
+        background:
+          'linear-gradient(100deg, #65421297 35.23%, #A47F43 100.08%)',
       },
     },
-  }));
+  })
+);
 
 const Contact = () => {
   const classes = useStyles();
@@ -235,8 +239,8 @@ const Contact = () => {
           CONTACT
         </Typography>
         <Typography variant="body2" color="primary">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Get in touch to find out about any of the services I offer or would to
+          like to find out anything else!
         </Typography>
         <br />
         <main>

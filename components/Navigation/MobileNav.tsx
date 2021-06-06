@@ -73,7 +73,8 @@ const useStyles = makeStyles((theme) => ({
 
 function MobileNav() {
   const router = useRouter();
-  const categories = ['Home', 'About', 'Work', 'Blog', 'Contact'];
+  // const categories = ['Home', 'About', 'Work', 'Blog', 'Contact'];
+  const categories = ['Home', 'About', 'Contact'];
   const classes = useStyles();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   function handleDrawerToggle() {

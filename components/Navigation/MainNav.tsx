@@ -46,19 +46,20 @@ const useStyles = makeStyles(() =>
         display: 'flex',
         flexDirection: 'row',
         width: '100%',
-        justifyContent: 'space-between',
+        // justifyContent: 'space-between',
+        justifyContent: 'flex-end',
         alignItems: 'center',
-        paddingLeft: '150px',
+        // paddingLeft: '150px',
       },
-      [theme.breakpoints.up('md')]: {
-        paddingLeft: '250px',
-      },
-      [theme.breakpoints.up('lg')]: {
-        paddingLeft: '450px',
-      },
-      [theme.breakpoints.up('xl')]: {
-        paddingLeft: '600px',
-      },
+      // [theme.breakpoints.up('md')]: {
+      //   paddingLeft: '250px',
+      // },
+      // [theme.breakpoints.up('lg')]: {
+      //   paddingLeft: '450px',
+      // },
+      // [theme.breakpoints.up('xl')]: {
+      //   paddingLeft: '600px',
+      // },
     },
     links: {
       cursor: 'pointer',
@@ -77,6 +78,10 @@ const useStyles = makeStyles(() =>
         },
       },
     },
+    // to be removed when work and about go back in
+    linksPadding: {
+      paddingRight: '100px',
+    },
     button: {
       background: '#000000',
       boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
@@ -86,7 +91,8 @@ const useStyles = makeStyles(() =>
     buttonText: {
       textTransform: 'none',
     },
-  }));
+  })
+);
 
 function MainNav() {
   const classes = useStyles();
@@ -117,7 +123,7 @@ function MainNav() {
             <Box className={classes.navItems}>
               <Link href="/about">
                 <Box
-                  className={`${classes.links} ${
+                  className={`${classes.links} ${classes.linksPadding} ${
                     router.pathname === '/about' ? 'active' : ''
                   }`}
                 >
@@ -126,7 +132,7 @@ function MainNav() {
                   </Typography>
                 </Box>
               </Link>
-              <Link href="/work">
+              {/* <Link href="/work">
                 <Box
                   className={`${classes.links} ${
                     router.pathname === '/work' ? 'active' : ''
@@ -136,8 +142,8 @@ function MainNav() {
                     WORK
                   </Typography>
                 </Box>
-              </Link>
-              <Link href="/blog">
+              </Link> */}
+              {/* <Link href="/blog">
                 <Box
                   className={`${classes.links} ${
                     router.pathname === '/blog' ? 'active' : ''
@@ -147,7 +153,7 @@ function MainNav() {
                     BLOG
                   </Typography>
                 </Box>
-              </Link>
+              </Link> */}
               <Link href="/contact">
                 <Box
                   className={`${classes.links} ${

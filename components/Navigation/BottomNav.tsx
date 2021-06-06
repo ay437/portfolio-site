@@ -61,13 +61,16 @@ const useStyles = makeStyles(() =>
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'end',
+      // justifyContent: 'space-evenly',
       alignItems: 'center',
       paddingRight: '0',
       width: '100%',
       [theme.breakpoints.up('md')]: {
+        // justifyContent: 'space-between',
         justifyContent: 'space-between',
         paddingRight: '60px',
-        width: '50%',
+        width: '20%',
+        // width: '50%',
       },
     },
     navItemsTwo: {
@@ -103,10 +106,10 @@ const useStyles = makeStyles(() =>
       paddingLeft: '0',
       marginTop: '0',
       [theme.breakpoints.up('md')]: {
-        marginTop: '-40px',
+        // marginTop: '-40px',
+        width: '21%',
       },
       [theme.breakpoints.up('lg')]: {
-        width: '21%',
         paddingLeft: '60px',
         marginTop: '0',
       },
@@ -155,7 +158,8 @@ const useStyles = makeStyles(() =>
     buttonText: {
       textTransform: 'none',
     },
-  }));
+  })
+);
 
 export default function BottomAppBar() {
   const classes = useStyles();
@@ -171,7 +175,7 @@ export default function BottomAppBar() {
                 </Typography>
               </Box>
             </Link>
-            <Link href="/work">
+            {/* <Link href="/work">
               <Box className={classes.navLinks}>
                 <Typography variant="overline" color="secondary">
                   WORK
@@ -184,7 +188,7 @@ export default function BottomAppBar() {
                   BLOG
                 </Typography>
               </Box>
-            </Link>
+            </Link> */}
             <Link href="/contact">
               <Box className={classes.navLinks}>
                 <Typography variant="overline" color="secondary">
@@ -208,11 +212,11 @@ export default function BottomAppBar() {
                   INSTAGRAM
                 </Typography>
               </MuiLink>
-              <MuiLink href="/" className={classes.navLinks}>
+              {/* <MuiLink href="/" className={classes.navLinks}>
                 <Typography variant="h4" color="secondary">
                   TWITTER
                 </Typography>
-              </MuiLink>
+              </MuiLink> */}
             </Box>
             <Box className={classes.navItemsTwoInner}>
               <MuiLink href="/" className={classes.navLinks}>
@@ -220,11 +224,11 @@ export default function BottomAppBar() {
                   LINKEDIN
                 </Typography>
               </MuiLink>
-              <MuiLink href="/" className={classes.navLinks}>
+              {/* <MuiLink href="/" className={classes.navLinks}>
                 <Typography variant="h4" color="secondary">
                   BEHANCE
                 </Typography>
-              </MuiLink>
+              </MuiLink> */}
             </Box>
           </Box>
           <Box className={classes.navBreakTwo}>

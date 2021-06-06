@@ -56,7 +56,7 @@ const responsiveFonts = (theme) => ({
       fontFamily: 'Nunito Sans',
       fontStyle: 'normal',
       fontSize: '0.875rem',
-      fontWeight: 400,
+      fontWeight: 700,
       [theme.breakpoints.up('sm')]: {
         fontSize: '0.9375rem',
       },

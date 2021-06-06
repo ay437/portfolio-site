@@ -16,6 +16,10 @@ const useStyles = makeStyles(() =>
         flexDirection: 'row',
         justifyContent: 'space-between',
       },
+      '&:hover': {
+        boxShadow: '12px 10px 22px 0px #CCE0DA',
+        cursor: 'pointer',
+      },
     },
     contentWrapper: {
       padding: '0px 40px 0 20px',
@@ -116,7 +120,8 @@ const useStyles = makeStyles(() =>
         marginLeft: '40px',
       },
     },
-  }));
+  })
+);
 
 interface CoverProps {
   title: string;
