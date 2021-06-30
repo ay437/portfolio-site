@@ -139,11 +139,11 @@ function About() {
               functionalities that make products successful, useful &amp; rich.
               <br />
               <br />
-              Personal part, Personal part,Personal part,Personal part,Personal
-              part,Personal part,Personal part,Personal part,Personal
-              part,Personal part,Personal part,Personal part,Personal part,
-              part,Personal part,Personal part,Personal part,Personal part,
-              part,Personal part,Personal part,Personal part,Personal part,
+              In my free time, I love to listen, make and play music -
+              especially electronic and trance! Another thing I enjoy doing is
+              playing sports like tennis, badminton and squash. Cooking is a
+              passion for me too, creative and freeflow is the order of the day
+              when in the kitchen - I steer away from recipes and cookbooks!
             </Typography>
             <Box marginLeft="70px" className={classes.halfVerticalLine}>
               <img
@@ -177,8 +177,9 @@ function About() {
             </Typography>
             <br />
             <Typography variant="body1" color="primary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              I am technology agnostic and keen to understand any of your
+              project needs, offering solutions from years of experience as a
+              software developer.
             </Typography>
           </Box>
           <Box className={classes.servicesBreaks}>
@@ -199,8 +200,9 @@ function About() {
             </Typography>
             <br />
             <Typography variant="body1" color="primary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              I have capabilities in understanding your brief and taking it
+              through to a brand identity, visual design, wireframing and
+              prototyping.
             </Typography>
           </Box>
           <Box className={classes.servicesBreaks}>
@@ -221,8 +223,9 @@ function About() {
             </Typography>
             <br />
             <Typography variant="body1" color="primary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              I can offer any services from SEO, Web Architecture &amp; Design
+              and more - understanding the right solution for the job is what I
+              strive for!
             </Typography>
           </Box>
         </Box>

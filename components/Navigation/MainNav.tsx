@@ -15,6 +15,7 @@ const useStyles = makeStyles(() =>
   createStyles({
     root: {
       flexGrow: 1,
+      marginTop: '30px',
     },
     appBar: {
       boxShadow: 'none',
@@ -114,8 +115,8 @@ function MainNav() {
                   <Image
                     src="/logo-black.png"
                     alt="logo"
-                    width={165}
-                    height={60}
+                    width={236}
+                    height={70}
                   />
                 </Box>
               </Link>

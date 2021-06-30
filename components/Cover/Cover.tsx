@@ -131,61 +131,63 @@ function Cover(props: CoverProps) {
   const classes = useStyles();
   const { title } = props;
   return (
-    <Box
-      border="2px solid #2A3036"
-      boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
-      borderRadius="16px"
-      height="100%"
-      display="flex"
-      className={classes.root}
-    >
-      <Box display="flex" className={classes.contentWrapper}>
-        <Box
-          display="flex"
-          flexDirection="column"
-          justifyContent="space-evenly"
-        >
-          <Typography variant="h2" color="secondary">
-            {title}
-          </Typography>
-          <Link href="/about">
+    <Link href="/about">
+      <Box
+        border="2px solid #2A3036"
+        boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
+        borderRadius="16px"
+        height="100%"
+        display="flex"
+        className={classes.root}
+      >
+        <Box display="flex" className={classes.contentWrapper}>
+          <Box
+            display="flex"
+            flexDirection="column"
+            justifyContent="space-evenly"
+          >
+            <Typography variant="h2" color="secondary">
+              {title}
+            </Typography>
+            {/* <Link href="/about"> */}
             <Box className={classes.aboutLink}>
               <Typography variant="body2" color="secondary">
                 FIND OUT MORE ABOUT ME &gt;
               </Typography>
             </Box>
-          </Link>
+            {/* </Link> */}
+          </Box>
         </Box>
-      </Box>
-      <Box display="flex" className={classes.imageWrapper}>
-        <Box
-          display="flex"
-          flexDirection="column"
-          justifyContent="center"
-          className={classes.image}
-        >
+        <Box display="flex" className={classes.imageWrapper}>
           <Box
-            bgcolor="#bbb"
-            borderRadius="50%"
-            className={classes.circleOne}
-          />
-          <Box
-            bgcolor="green"
-            borderRadius="50%"
-            className={classes.circleTwo}
-          />
-          <Box position="absolute">
-            <img
-              src="/headshot.svg"
-              alt="headshot"
-              width={166}
-              height={283}
-              className={classes.profileImage}
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            className={classes.image}
+          >
+            <Box
+              bgcolor="#bbb"
+              borderRadius="50%"
+              className={classes.circleOne}
             />
+            <Box
+              bgcolor="green"
+              borderRadius="50%"
+              className={classes.circleTwo}
+            />
+            <Box position="absolute">
+              <img
+                src="/headshot.svg"
+                alt="headshot"
+                width={166}
+                height={283}
+                className={classes.profileImage}
+              />
+            </Box>
           </Box>
         </Box>
       </Box>
-    </Box>
+    </Link>
   );
 }
 

@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme: Theme) =>
         width: '81%',
         height: '700px',
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
       },
       [theme.breakpoints.up('lg')]: {
         width: '85%',

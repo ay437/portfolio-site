@@ -69,7 +69,12 @@ function MainLogo() {
       alignItems="center"
     >
       {/* <Sketch setup={setup} draw={draw} /> */}
-      <Image src="/main-logo.svg" alt="logo-white" width={130} height={161} />
+      <Image
+        src="/ay-logo-white.png"
+        alt="logo-white"
+        width={120}
+        height={204}
+      />
     </Box>
   );
 }

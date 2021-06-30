@@ -61,14 +61,14 @@ function ArticleBanner() {
       overflow="auto"
       className={classes.articleBannerWrapper}
     >
-      {/* <Box
+      <Box
         className={classes.articleImage}
         display="flex"
         flexDirection="column"
         justifyContent="flex-end"
         alignItems="flex-start"
       >
-        <Box className={classes.articleWrapper}>
+        {/* <Box className={classes.articleWrapper}>
           <Button className={classes.articleButton}>
             <Typography variant="button" color="primary">
               ARTICLE
@@ -81,8 +81,8 @@ function ArticleBanner() {
           >
             The future of creative coding
           </Typography>
-        </Box>
-      </Box> */}
+        </Box> */}
+      </Box>
     </Box>
     // </Link>
   );
