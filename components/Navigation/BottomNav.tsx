@@ -206,18 +206,18 @@ export default function BottomAppBar() {
             />
           </Box>
           <Box className={classes.navItemsTwo}>
-            <Box className={classes.navItemsTwoInner}>
+<!--             <Box className={classes.navItemsTwoInner}>
               <MuiLink href="/" className={classes.navLinks}>
                 <Typography variant="overline" color="secondary">
                   INSTAGRAM
                 </Typography>
-              </MuiLink>
+              </MuiLink> -->
               {/* <MuiLink href="/" className={classes.navLinks}>
                 <Typography variant="h4" color="secondary">
                   TWITTER
                 </Typography>
               </MuiLink> */}
-            </Box>
+<!--             </Box> -->
             <Box className={classes.navItemsTwoInner}>
               <MuiLink href="/" className={classes.navLinks}>
                 <Typography variant="overline" color="secondary">
