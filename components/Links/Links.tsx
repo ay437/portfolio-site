@@ -40,8 +40,7 @@ const useStyles = makeStyles(() =>
           'invert(0.5) sepia(1) hue-rotate(200deg) saturate(4) brightness(1)',
       },
     },
-  })
-);
+  }));
 
 function Links() {
   const classes = useStyles();
@@ -83,7 +82,7 @@ function Links() {
           <Image src="/twitter.svg" alt="Twitter" width={40} height={40} className={classes.icon} />
         </a>
       </Box> */}
-<!--       <Box className={classes.topIcons} paddingRight="20px">
+      {/* <Box className={classes.topIcons} paddingRight="20px">
         <a href="https://www.instagram.com/arjunyv/">
           <Image
             src="/instagram.svg"
@@ -93,8 +92,8 @@ function Links() {
             className={classes.icon}
           />
         </a>
-      </Box>
-      <Box flexBasis="100%" height="0" /> -->
+      </Box> */}
+      <Box flexBasis="100%" height="0" />
       {/* <Box className={classes.topIcons} paddingLeft="20px">
         <a href="https://www.linkedin.com/in/arjunpyadav/">
           <Image
