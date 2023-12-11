@@ -1,7 +1,7 @@
 /* eslint-disable no-confusing-arrow */
-import React, { useEffect, ReactChild, ReactChildren } from 'react';
+import React, { ReactChild, ReactChildren } from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
-import AOS from 'aos';
+// import AOS from 'aos';
 import CardWrapper from '../../CardWrapper/CardWrapper';
 import LayoutData from './HomeLayoutGridData';
 import ContentData from './HomeLayoutContentData';
@@ -28,13 +28,13 @@ export default function Layout(props: AltLayout) {
     xxs: layout3,
   };
 
-  useEffect(() => {
-    AOS.init({
-      offset: 400,
-      duration: 1000,
-      once: true,
-    });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({
+  //     offset: 400,
+  //     duration: 1000,
+  //     once: true,
+  //   });
+  // }, []);
 
   return (
     <div>
@@ -59,27 +59,28 @@ export default function Layout(props: AltLayout) {
           xxs: 12,
         }}
       >
-        {contentData.map((sectionData) =>
-          sectionData.dataAos !== 'fade-in' ? (
-            <div
-              key={sectionData.id}
-              className={`fade-in ${sectionData.style}`}
-            >
-              <CardWrapper
-                name={sectionData.name}
-                backButton={false}
-                blogOrWork={false}
-              />
-            </div>
-          ) : (
-            <div key={sectionData.id} data-aos={sectionData.dataAos}>
-              <CardWrapper
-                name={sectionData.name}
-                backButton={false}
-                blogOrWork={false}
-              />
-            </div>
-          )
+        {contentData.map((sectionData) => (
+        // sectionData.dataAos !== 'fade-in' ? (
+        //   <div
+        //     key={sectionData.id}
+        //     className={`fade-in ${sectionData.style}`}
+        //   >
+        //     <CardWrapper
+        //       name={sectionData.name}
+        //       backButton={false}
+        //       blogOrWork={false}
+        //     />
+        //   </div>
+        // ) : ( (
+          <div key={sectionData.id}>
+            <CardWrapper
+              name={sectionData.name}
+              backButton={false}
+              blogOrWork={false}
+            />
+          </div>
+        ),
+          // )
         )}
       </ResponsiveGridLayout>
     </div>
