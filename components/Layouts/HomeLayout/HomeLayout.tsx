@@ -1,7 +1,6 @@
 /* eslint-disable no-confusing-arrow */
 import React, { ReactChild, ReactChildren } from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
-// import AOS from 'aos';
 import CardWrapper from '../../CardWrapper/CardWrapper';
 import LayoutData from './HomeLayoutGridData';
 import ContentData from './HomeLayoutContentData';
@@ -27,14 +26,6 @@ export default function Layout(props: AltLayout) {
     xs: layout3,
     xxs: layout3,
   };
-
-  // useEffect(() => {
-  //   AOS.init({
-  //     offset: 400,
-  //     duration: 1000,
-  //     once: true,
-  //   });
-  // }, []);
 
   return (
     <div>
